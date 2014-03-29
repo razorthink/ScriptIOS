@@ -19,6 +19,11 @@
 		619947CF18E745CA00991D0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B718E745CA00991D0E /* UIKit.framework */; };
 		619947D718E745CA00991D0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 619947D518E745CA00991D0E /* InfoPlist.strings */; };
 		619947D918E745CA00991D0E /* JS_Exports_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947D818E745CA00991D0E /* JS_Exports_testTests.m */; };
+		619947E318E745D200991D0E /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947E218E745D200991D0E /* JavaScriptCore.framework */; };
+		619947E618E7477700991D0E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947E518E7477700991D0E /* Person.m */; };
+		619947E818E7498E00991D0E /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 619947E718E7498E00991D0E /* script.js */; };
+		619947EC18E74AF100991D0E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947EA18E74AF100991D0E /* RootViewController.m */; };
+		619947ED18E74AF100991D0E /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619947EB18E74AF100991D0E /* RootViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,13 @@
 		619947D418E745CA00991D0E /* JS-Exports-testTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JS-Exports-testTests-Info.plist"; sourceTree = "<group>"; };
 		619947D618E745CA00991D0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		619947D818E745CA00991D0E /* JS_Exports_testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JS_Exports_testTests.m; sourceTree = "<group>"; };
+		619947E218E745D200991D0E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		619947E418E7477700991D0E /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		619947E518E7477700991D0E /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		619947E718E7498E00991D0E /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		619947E918E74AF100991D0E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		619947EA18E74AF100991D0E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		619947EB18E74AF100991D0E /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619947E318E745D200991D0E /* JavaScriptCore.framework in Frameworks */,
 				619947B618E745CA00991D0E /* CoreGraphics.framework in Frameworks */,
 				619947B818E745CA00991D0E /* UIKit.framework in Frameworks */,
 				619947B418E745CA00991D0E /* Foundation.framework in Frameworks */,
@@ -96,6 +109,7 @@
 		619947B218E745CA00991D0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				619947E218E745D200991D0E /* JavaScriptCore.framework */,
 				619947B318E745CA00991D0E /* Foundation.framework */,
 				619947B518E745CA00991D0E /* CoreGraphics.framework */,
 				619947B718E745CA00991D0E /* UIKit.framework */,
@@ -109,6 +123,12 @@
 			children = (
 				619947C218E745CA00991D0E /* AppDelegate.h */,
 				619947C318E745CA00991D0E /* AppDelegate.m */,
+				619947E418E7477700991D0E /* Person.h */,
+				619947E518E7477700991D0E /* Person.m */,
+				619947E718E7498E00991D0E /* script.js */,
+				619947E918E74AF100991D0E /* RootViewController.h */,
+				619947EA18E74AF100991D0E /* RootViewController.m */,
+				619947EB18E74AF100991D0E /* RootViewController.xib */,
 				619947C518E745CA00991D0E /* Images.xcassets */,
 				619947BA18E745CA00991D0E /* Supporting Files */,
 			);
@@ -221,6 +241,8 @@
 			files = (
 				619947BE18E745CA00991D0E /* InfoPlist.strings in Resources */,
 				619947C618E745CA00991D0E /* Images.xcassets in Resources */,
+				619947ED18E74AF100991D0E /* RootViewController.xib in Resources */,
+				619947E818E7498E00991D0E /* script.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619947E618E7477700991D0E /* Person.m in Sources */,
 				619947C418E745CA00991D0E /* AppDelegate.m in Sources */,
+				619947EC18E74AF100991D0E /* RootViewController.m in Sources */,
 				619947C018E745CA00991D0E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
