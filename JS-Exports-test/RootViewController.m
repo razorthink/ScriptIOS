@@ -10,6 +10,8 @@
 #import "AppContext.h"
 #import "View.h"
 #import "Utils.h"
+#import "Button.h"
+#import "Label.h"
 
 @interface RootViewController ()
 
@@ -36,13 +38,14 @@
 
     context = [[AppContext alloc] init].context;
     
-    View *mainView = [[View alloc] initWithFrame:CGRectMake(0, 400, 320, 100)];
-    mainView.backgroundColor = [UIColor blackColor];
-    mainView.alpha = 0.5f;
+    View *mainView = [[View alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.view addSubview:mainView];
     
     context[@"MainView"] = mainView;
     context[@"Utils"] = [Utils class];
+    context[@"View"] = [View class];
+    context[@"Button"] = [Button class];
+    context[@"Label"] = [Label class];
     
     NSError *error;
     NSString *scriptPath = [[NSBundle mainBundle] pathForResource:@"ui" ofType:@"js"];
@@ -51,6 +54,12 @@
     [context evaluateScript:script];
     NSLog(@"UI script executed");
     
+}
+
+-(void)loadView
+{
+    self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,30 +1,29 @@
 //
-//  View.m
+//  Button.m
 //  JS-Exports-test
 //
 //  Created by Sandeep S Kumar on 30/03/14.
 //  Copyright (c) 2014 Razorthink. All rights reserved.
 //
 
-#import "View.h"
+#import "Button.h"
 #import "Utils.h"
-#import "AppContext.h"
 
-@implementation View
+@implementation Button
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-    
+        // Initialization code
     }
     return self;
 }
 
-+ (View *)create
++ (id)create
 {
-    View *view = [[View alloc] init];
-    return view;
+    Button *button = [[Button alloc] init];
+    return button;
 }
 
 -(void)set:(NSDictionary *)config
@@ -44,6 +43,20 @@
     if (config[@"cornerRadius"] != nil) {
         self.layer.cornerRadius = [config[@"cornerRadius"] floatValue];
     }
+    
+    if (config[@"title"] != nil) {
+        [self setTitle:config[@"title"] forState:UIControlStateNormal];
+    }
+    
+    if (config[@"titleColor"] != nil) {
+        [self setTitleColor:(UIColor *)config[@"titleColor"] forState:UIControlStateNormal];
+    }
+    
+    if (config[@"font"] != nil) {
+        float size = config[@"fontSize"] == nil ? 16 : [config[@"fontSize"] floatValue];
+        [self.titleLabel setFont:[UIFont fontWithName:config[@"font"] size:size]];
+    }
+    
 }
 
 - (void)addSubNode:(UIView *)subNode {

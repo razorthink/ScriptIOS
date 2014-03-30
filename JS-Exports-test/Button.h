@@ -1,5 +1,5 @@
 //
-//  View.h
+//  Button.h
 //  JS-Exports-test
 //
 //  Created by Sandeep S Kumar on 30/03/14.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <JavaScriptCore/JavaScriptCore.h>
 
-@protocol ViewJSExports <JSExport>
+@protocol ButtonJSExports <JSExport>
 
 - (void)set:(NSDictionary *)config;
 - (void)addSubNode:(UIView *)subNode;
@@ -18,6 +18,6 @@
 
 @end
 
-@interface View : UIView <ViewJSExports>
+@interface Button : UIButton <ButtonJSExports>
 
 @end

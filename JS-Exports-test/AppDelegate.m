@@ -39,12 +39,11 @@
 - (void)createContext
 {
     
-    NSDictionary *console = @{
-                              @"log": ^{ NSLog(@"JS log: %@", [JSContext currentArguments]); },
-                              @"error": ^{ NSLog(@"JS err   : %@", [JSContext currentArguments]); },
-                              @"trace": ^{}
-                              };
-    context[@"console"] = console;
+    context[@"console"] = @{
+                            @"log": ^{ NSLog(@"JS log: %@", [JSContext currentArguments]); },
+                            @"error": ^{ NSLog(@"JS err   : %@", [JSContext currentArguments]); },
+                            @"trace": ^{}
+                            };
     
     NSError *error;
     NSString *scriptPath = [[NSBundle mainBundle] pathForResource:@"script" ofType:@"js"];
