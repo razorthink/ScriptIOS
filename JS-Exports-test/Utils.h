@@ -12,7 +12,7 @@
 @protocol UtilsJSExports <JSExport>
 
 + (UIColor *)makeColor:(NSArray *)rgba;
-+ (CGRect )makeFrame:(NSDictionary *)frame;
++ (CGRect )makeFrame:(NSArray *)frame;
 
 @end
 

@@ -27,22 +27,20 @@
     return view;
 }
 
--(void)set:(NSDictionary *)config
+-(void)set:(JSValue *)config
 {
-    if (config[@"alpha"] != nil) {
-        self.alpha = [config[@"alpha"] floatValue];
+    self.alpha = [config[@"alpha"] isUndefined] ? 1.0 : [config[@"alpha"] toDouble];
+    
+    if (![config[@"background"] isUndefined]) {
+        self.backgroundColor = [config[@"background"] toObjectOfClass:[UIColor class]];
     }
     
-    if (config[@"background"] != nil) {
-        self.backgroundColor = (UIColor *)config[@"background"];
+    if (![config[@"frame"] isUndefined]) {
+        self.frame = [config[@"frame"] toRect];
     }
     
-    if (config[@"frame"] != nil) {
-        self.frame = [Utils makeFrame:config[@"frame"]];
-    }
-    
-    if (config[@"cornerRadius"] != nil) {
-        self.layer.cornerRadius = [config[@"cornerRadius"] floatValue];
+    if (![config[@"cornerRadius"] isUndefined]) {
+        self.layer.cornerRadius = [config[@"cornerRadius"] toDouble];
     }
 }
 

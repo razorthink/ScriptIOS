@@ -12,6 +12,7 @@
 @protocol AppContextJSExports <JSExport>
 
 @property JSContext *context;
++(JSContext *)currentContext;
 
 @end
 

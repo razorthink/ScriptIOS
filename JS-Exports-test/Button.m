@@ -8,14 +8,17 @@
 
 #import "Button.h"
 #import "Utils.h"
+#import "AppContext.h"
 
 @implementation Button
+
+@synthesize tapHandler;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        [self addTarget:self action:@selector(runTapHandler) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
 }
@@ -26,37 +29,46 @@
     return button;
 }
 
--(void)set:(NSDictionary *)config
+- (void)set:(JSValue *)config
 {
-    if (config[@"alpha"] != nil) {
-        self.alpha = [config[@"alpha"] floatValue];
+    self.alpha = [config[@"alpha"] isUndefined] ? 1.0 : [config[@"alpha"] toDouble];
+    
+    if (![config[@"background"] isUndefined]) {
+        self.backgroundColor = [config[@"background"] toObjectOfClass:[UIColor class]];
     }
     
-    if (config[@"background"] != nil) {
-        self.backgroundColor = (UIColor *)config[@"background"];
+    if (![config[@"frame"] isUndefined]) {
+        self.frame = [config[@"frame"] toRect];
     }
     
-    if (config[@"frame"] != nil) {
-        self.frame = [Utils makeFrame:config[@"frame"]];
+    if (![config[@"cornerRadius"] isUndefined]) {
+        self.layer.cornerRadius = [config[@"cornerRadius"] toDouble];
     }
     
-    if (config[@"cornerRadius"] != nil) {
-        self.layer.cornerRadius = [config[@"cornerRadius"] floatValue];
+    if (![config[@"title"] isUndefined]) {
+        [self setTitle:[config[@"title"] toString] forState:UIControlStateNormal];
     }
     
-    if (config[@"title"] != nil) {
-        [self setTitle:config[@"title"] forState:UIControlStateNormal];
+    if (![config[@"titleColor"] isUndefined]) {
+        [self setTitleColor:[config[@"titleColor"] toObjectOfClass:[UIColor class]] forState:UIControlStateNormal];
     }
     
-    if (config[@"titleColor"] != nil) {
-        [self setTitleColor:(UIColor *)config[@"titleColor"] forState:UIControlStateNormal];
+    if (![config[@"font"] isUndefined]) {
+        double size = [config[@"fontSize"] isUndefined] ? 16 : [config[@"fontSize"] toDouble];
+        [self.titleLabel setFont:[UIFont fontWithName:[config[@"font"] toString] size:size]];
     }
     
-    if (config[@"font"] != nil) {
-        float size = config[@"fontSize"] == nil ? 16 : [config[@"fontSize"] floatValue];
-        [self.titleLabel setFont:[UIFont fontWithName:config[@"font"] size:size]];
-    }
-    
+}
+
+- (void)setEvent:(NSString *)event withHandler:(JSValue *)handler
+{
+    tapHandler = [JSManagedValue managedValueWithValue:handler];
+    [[JSContext currentContext].virtualMachine addManagedReference:tapHandler withOwner:self];
+}
+
+- (void)runTapHandler
+{
+    [[tapHandler value] callWithArguments:@[]];
 }
 
 - (void)addSubNode:(UIView *)subNode {

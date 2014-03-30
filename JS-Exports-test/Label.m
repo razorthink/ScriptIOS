@@ -26,39 +26,41 @@
     return button;
 }
 
--(void)set:(NSDictionary *)config
+-(void)set:(JSValue *)config
 {
-    if (config[@"alpha"] != nil) {
-        self.alpha = [config[@"alpha"] floatValue];
+    self.alpha = [config[@"alpha"] isUndefined] ? 1.0 : [config[@"alpha"] toDouble];
+    
+    if (![config[@"background"] isUndefined]) {
+        self.backgroundColor = [config[@"background"] toObjectOfClass:[UIColor class]];
     }
     
-    if (config[@"background"] != nil) {
-        self.backgroundColor = (UIColor *)config[@"background"];
+    if (![config[@"frame"] isUndefined]) {
+        self.frame = [config[@"frame"] toRect];
     }
     
-    if (config[@"frame"] != nil) {
-        self.frame = [Utils makeFrame:config[@"frame"]];
+    if (![config[@"font"] isUndefined]) {
+        double size = [config[@"fontSize"] isUndefined] ? 16 : [config[@"fontSize"] toDouble];
+        [self setFont:[UIFont fontWithName:[config[@"font"] toString] size:size]];
+    }
+    if (![config[@"text"] isUndefined]) {
+        [self setText:[config[@"text"] toString]];
     }
     
-    if (config[@"text"] != nil) {
-        [self setText:config[@"text"]];
+    if (![config[@"textColor"] isUndefined]) {
+        [self setTextColor:[config[@"textColor"] toObjectOfClass:[UIColor class]]];
     }
     
-    if (config[@"textColor"] != nil) {
-        [self setTextColor:(UIColor *)config[@"textColor"]];
+    if (![config[@"textAlign"] isUndefined]) {
+        NSString *align = [config[@"textAlign"] toString];
+        
+        if ([align isEqual:@"left"]) [self setTextAlignment:NSTextAlignmentLeft];
+        if ([align isEqual:@"right"]) [self setTextAlignment:NSTextAlignmentRight];
+        if ([align isEqual:@"center"]) [self setTextAlignment:NSTextAlignmentCenter];
+        if ([align isEqual:@"justified"]) [self setTextAlignment:NSTextAlignmentJustified];
     }
     
-    if (config[@"font"] != nil) {
-        float size = config[@"fontSize"] == nil ? 16 : [config[@"fontSize"] floatValue];
-        [self setFont:[UIFont fontWithName:config[@"font"] size:size]];
-    }
-    
-    if (config[@"textAlign"] != nil) {
-        [self setTextAlignment:NSTextAlignmentCenter];
-    }
-    
-    if (config[@"lines"] != nil) {
-        self.numberOfLines = [config[@"lines"] integerValue];
+    if (![config[@"lines"] isUndefined]) {
+        self.numberOfLines = [config[@"lines"] toInt32];
     }
     
 }

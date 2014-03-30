@@ -11,7 +11,7 @@
 
 @protocol ViewJSExports <JSExport>
 
-- (void)set:(NSDictionary *)config;
+- (void)set:(JSValue *)config;
 - (void)addSubNode:(UIView *)subNode;
 
 + (id)create;

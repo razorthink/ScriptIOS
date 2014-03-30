@@ -27,4 +27,9 @@ static JSContext *sContext;
     return self;
 }
 
++(JSContext *)currentContext
+{
+    return sContext;
+}
+
 @end
