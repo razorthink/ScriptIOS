@@ -9,9 +9,18 @@
 #import "AppDelegate.h"
 #import "Person.h"
 #import "RootViewController.h"
+#import "AppContext.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
+@interface AppDelegate ()
+
+@property JSContext *context;
+
+@end
+
 @implementation AppDelegate
+
+@synthesize context;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -19,6 +28,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
+    context = [[AppContext alloc] init].context;
     self.window.rootViewController = [[RootViewController alloc] init];
     [self createContext];
     
@@ -28,7 +38,6 @@
 
 - (void)createContext
 {
-    JSContext *context = [[JSContext alloc] init];
     
     NSDictionary *console = @{
                               @"log": ^{ NSLog(@"JS log: %@", [JSContext currentArguments]); },
@@ -39,15 +48,19 @@
     
     NSError *error;
     NSString *scriptPath = [[NSBundle mainBundle] pathForResource:@"script" ofType:@"js"];
-    NSString *script = [NSString stringWithContentsOfFile:scriptPath encoding:NSUTF8StringEncoding error:&error];
+    NSString *script = [NSString stringWithContentsOfFile:scriptPath encoding:NSUTF8StringEncoding error:&error];   
     
-    Person *me = [[Person alloc] init];
-    context[@"me"] = me;
-    JSValue *meValue = context[@"me"];
+    context[@"Person"] = [Person class];
     
     [context evaluateScript:script];
     
-    NSLog(@"App: %@", [meValue objectForKeyedSubscript:@"name"]);
+    JSValue *sandJS = context[@"sand"];
+    Person *sand = [sandJS toObject];
+    
+    NSLog(@"App: %@", sand.name);
+    
+    JSContext *test = [[AppContext alloc] init].context;
+    [test evaluateScript:@"console.log(sand.name)"];
 }
 
 @end

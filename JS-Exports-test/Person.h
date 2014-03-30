@@ -12,6 +12,7 @@
 @protocol PersonJSExports <JSExport>
 
 @property NSString *name;
++ (id)newPersonWithName:(NSString *)name;
 
 @end
 

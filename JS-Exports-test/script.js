@@ -1,3 +1,6 @@
-console.log(JSON.stringify(me));
-
-me.name = "sandeep s kumar";
+try {
+    var sand = Person.newPersonWithName("sand");
+    // console.log(sand.name);
+} catch (err) {
+    // console.error(err);
+}

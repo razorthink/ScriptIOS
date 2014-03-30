@@ -7,12 +7,18 @@
 //
 
 #import "RootViewController.h"
+#import "AppContext.h"
+#import "View.h"
 
 @interface RootViewController ()
+
+@property JSContext *context;
 
 @end
 
 @implementation RootViewController
+
+@synthesize context;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +32,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    context = [[AppContext alloc] init].context;
+    
+    View *mainView = [[View alloc] initWithFrame:CGRectMake(0, 400, 320, 100)];
+    mainView.backgroundColor = [UIColor blackColor];
+    mainView.alpha = 0.5f;
+    [self.view addSubview:mainView];
+    
+    // context[@"MainView"] = mainView;
+    
+//    NSError *error;
+//    NSString *scriptPath = [[NSBundle mainBundle] pathForResource:@"ui" ofType:@"js"];
+//    NSString *script = [NSString stringWithContentsOfFile:scriptPath encoding:NSUTF8StringEncoding error:&error];
+    
+    // [context evaluateScript:script];
+    NSLog(@"UI script executed");
+    
 }
 
 - (void)didReceiveMemoryWarning

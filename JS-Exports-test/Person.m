@@ -18,4 +18,12 @@
     return self;
 }
 
++ (id)newPersonWithName:(NSString *)name
+{
+    Person *person = [[Person alloc] init];
+    person.name = name;
+    
+    return person;
+}
+
 @end
