@@ -16,6 +16,7 @@
 
 - (void)set:(JSValue *)config;
 - (void)addSubNode:(UIView *)subNode;
+- (JSValue *)get:(NSString *)attr;
 
 JSExportAs(on, - (void)setEvent:(NSString *)event withHandler:(JSValue *)handler);
 

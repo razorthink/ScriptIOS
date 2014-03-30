@@ -13,6 +13,7 @@
 
 - (void)set:(JSValue *)config;
 - (void)addSubNode:(UIView *)subNode;
+- (JSValue *)get:(NSString *)attr;
 
 + (id)create;
 

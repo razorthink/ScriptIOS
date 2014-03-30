@@ -9,6 +9,7 @@ try {
     });
 
     var buttonStyle = {
+        alpha: 0.95,
         background: Utils.makeColor([255, 255, 255, 1]),
         cornerRadius: 4,
         titleColor: Utils.makeColor([0, 0, 0, 0.75]),
@@ -36,6 +37,8 @@ try {
         });
     });
 
+    // console.log("button width", button.get('frame').width);
+
     var button2 = UI.Button.create();
     button2.set(buttonStyle);
     button2.set({
@@ -53,11 +56,20 @@ try {
     var label = UI.Label.create();
     MainView.addSubNode(label);
     label.set({
-        frame: Utils.makeFrame([30, 0, 260, 370]),
+        frame: Utils.makeFrame([30, 50, 260, 320]),
+        // background: Utils.makeColor([255, 255, 255, 1]),
         textColor: Utils.makeColor([255, 255, 255, 1]),
-        text: "\"I've always wondered if these kinda things were possile; I finally have a solution now. \rAnd the best part is that i build this thing myself!\"",
-        font: "avenir", textAlign: "left", lines: 0
+        text: "\"I've always wondered if these kinda things were possile;"
+              + "I finally have a solution now."
+              + "\rAnd the best part is that i build this thing myself!\""
+              + "\rLorem ipsum dolor sit amet, consectetur adipisicing elit."
+              + "Optio, animi iste cumque voluptas quis earum perferendis praesentium"
+              + "ex molestias distinctio quidem doloribus soluta voluptates possimus ipsa.",
+        font: "avenir", textAlign: "right", lines: 0
     });
+    label.background = Utils.makeColor([255, 255, 255, 1]);
+
+    // console.log(label.get('textAlign'));
 
 } catch (err) {
     console.error(err);

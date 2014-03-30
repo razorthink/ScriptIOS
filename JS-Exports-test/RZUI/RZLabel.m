@@ -28,7 +28,9 @@
 
 -(void)set:(JSValue *)config
 {
-    self.alpha = [config[@"alpha"] isUndefined] ? 1.0 : [config[@"alpha"] toDouble];
+    if (![config[@"alpha"] isUndefined]) {
+        self.alpha = [config[@"alpha"] toDouble];
+    }
     
     if (![config[@"background"] isUndefined]) {
         self.backgroundColor = [config[@"background"] toObjectOfClass:[UIColor class]];
@@ -63,6 +65,61 @@
         self.numberOfLines = [config[@"lines"] toInt32];
     }
     
+}
+
+- (JSValue *)get:(NSString *)attr
+{
+    if ([attr isEqualToString:@"alpha"]) {
+        return [JSValue valueWithDouble:self.alpha inContext:[JSContext currentContext]];
+    }
+    
+    else if ([attr isEqualToString:@"background"]) {
+        return [JSValue valueWithObject:self.backgroundColor inContext:[JSContext currentContext]];
+    }
+    
+    else if ([attr isEqualToString:@"frame"]) {
+        return [JSValue valueWithRect:self.frame inContext:[JSContext currentContext]];
+    }
+    
+    else if ([attr isEqualToString:@"font"]) {
+        return [JSValue valueWithObject:self.font.fontName inContext:[JSContext currentContext]];
+    }
+    
+    else if ([attr isEqualToString:@"textColor"]) {
+        return [JSValue valueWithObject:[self textColor] inContext:[JSContext currentContext]];
+    }
+    
+    else if ([attr isEqualToString:@"lines"]) {
+        return [JSValue valueWithDouble:self.numberOfLines inContext:[JSContext currentContext]];
+    }
+    
+    else if ([attr isEqualToString:@"textAlign"]) {
+        switch (self.textAlignment) {
+            case 0:
+                return [JSValue valueWithObject:@"left" inContext:[JSContext currentContext]];
+                break;
+            
+            case 1:
+                return [JSValue valueWithObject:@"center" inContext:[JSContext currentContext]];
+                break;
+                
+            case 2:
+                return [JSValue valueWithObject:@"right" inContext:[JSContext currentContext]];
+                break;
+                
+            case 3:
+                return [JSValue valueWithObject:@"justified" inContext:[JSContext currentContext]];
+                break;
+            
+            case 4: // fall through
+                
+            default:
+                return [JSValue valueWithObject:@"natural" inContext:[JSContext currentContext]];
+                break;
+        }
+    }
+    
+    return nil;
 }
 
 - (void)addSubNode:(UIView *)subNode {

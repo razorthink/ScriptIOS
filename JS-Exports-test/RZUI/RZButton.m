@@ -31,7 +31,9 @@
 
 - (void)set:(JSValue *)config
 {
-    self.alpha = [config[@"alpha"] isUndefined] ? 1.0 : [config[@"alpha"] toDouble];
+    if (![config[@"alpha"] isUndefined]) {
+        self.alpha = [config[@"alpha"] toDouble];
+    }
     
     if (![config[@"background"] isUndefined]) {
         self.backgroundColor = [config[@"background"] toObjectOfClass:[UIColor class]];
@@ -58,6 +60,27 @@
         [self.titleLabel setFont:[UIFont fontWithName:[config[@"font"] toString] size:size]];
     }
     
+}
+
+- (JSValue *)get:(NSString *)attr
+{
+    if ([attr isEqualToString:@"alpha"]) {
+        return [JSValue valueWithDouble:self.alpha inContext:[JSContext currentContext]];
+    }
+    
+    else if ([attr isEqualToString:@"background"]) {
+        return [JSValue valueWithObject:self.backgroundColor inContext:[JSContext currentContext]];
+    }
+    
+    else if ([attr isEqualToString:@"frame"]) {
+        return [JSValue valueWithRect:self.frame inContext:[JSContext currentContext]];
+    }
+    
+    else if ([attr isEqualToString:@"cornerRadius"]) {
+        return [JSValue valueWithDouble:self.layer.cornerRadius inContext:[JSContext currentContext]];
+    }
+    
+    return nil;
 }
 
 - (void)setEvent:(NSString *)event withHandler:(JSValue *)handler
