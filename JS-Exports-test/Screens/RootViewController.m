@@ -42,10 +42,6 @@
     [self.view addSubview:mainView];
     
     context[@"MainView"] = mainView;
-    context[@"Utils"] = [Utils class];
-    context[@"RZView"] = [RZView class];
-    context[@"RZButton"] = [RZButton class];
-    context[@"RZLabel"] = [RZLabel class];
     
     NSError *error;
     NSString *scriptPath = [[NSBundle mainBundle] pathForResource:@"ui" ofType:@"js"];

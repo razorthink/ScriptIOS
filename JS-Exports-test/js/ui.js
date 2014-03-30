@@ -1,34 +1,61 @@
 try {
     MainView.set({ background: Utils.makeColor([231, 76, 60, 1]) });
 
-    var subView = RZView.create();
+    var subView = UI.View.create();
     MainView.addSubNode(subView);
     subView.set({
         frame: Utils.makeFrame([0, 400, 320, 168]),
         background: Utils.makeColor([0, 0, 0, 0.75])
     });
 
-    var button = RZButton.create();
-    subView.addSubNode(button);
-    button.set({
-        frame: Utils.makeFrame([30, 168 - 50, 260, 30]),
-        // frame: {x: 30, y: 98, width: 260, height: 50} /* this works too*/
+    var buttonStyle = {
         background: Utils.makeColor([255, 255, 255, 1]),
         cornerRadius: 4,
-        title: "Press Me",
         titleColor: Utils.makeColor([0, 0, 0, 0.75]),
         font: "avenir", fontSize: 18
+    };
+
+    var button = UI.Button.create();
+    subView.addSubNode(button);
+    button.set(buttonStyle);
+    button.set({
+        frame: Utils.makeFrame([30, 84 - 15, 260, 30]),
+        title: "Tap for action",
     });
     button.on("tap", function () {
-        console.log("tap handler in JS");
+        subView.addSubNode(button2);
+        button.set({ 
+            title: "Reset",
+            frame: Utils.makeFrame([30, 84 - 45, 260, 30])
+        });
+        button.on("tap", function () {
+            button2.set({ 
+                background: Utils.makeColor([255, 255, 255, 1]),
+                title: "Tap me! Tap me!"
+            });
+        });
     });
 
-    var label = RZLabel.create();
+    var button2 = UI.Button.create();
+    button2.set(buttonStyle);
+    button2.set({
+        frame: Utils.makeFrame([30, 84 + 15, 260, 30]),
+        title: "Tap me! Tap me!"
+    });
+
+    button2.on("tap", function () {
+        button2.set({
+            background: Utils.makeColor([241, 196, 15, 1.0]),
+            title: "I turned yellow!"
+        });
+    });
+
+    var label = UI.Label.create();
     MainView.addSubNode(label);
     label.set({
         frame: Utils.makeFrame([30, 0, 260, 370]),
         textColor: Utils.makeColor([255, 255, 255, 1]),
-        text: "\"I've always wondered if things kinda thing was possile; I finally have a solution now. \rAnd the best part is that i build this thing myself!\"",
+        text: "\"I've always wondered if these kinda things were possile; I finally have a solution now. \rAnd the best part is that i build this thing myself!\"",
         font: "avenir", textAlign: "left", lines: 0
     });
 

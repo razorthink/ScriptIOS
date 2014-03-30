@@ -9,6 +9,10 @@
 #import "AppDelegate.h"
 #import "AppContext.h"
 #import "RootViewController.h"
+#import "RZUI/RZButton.h"
+#import "RZUI/RZLabel.h"
+#import "RZUI/RZView.h"
+#import "Utils.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
 @interface AppDelegate ()
@@ -43,6 +47,15 @@
                             @"error": ^{ NSLog(@"JS err   : %@", [JSContext currentArguments]); },
                             @"trace": ^{}
                             };
+    
+    context[@"Utils"] = [Utils class];
+    
+    context[@"Utils"] = [Utils class];
+    context[@"UI"] = @{
+                       @"View": [RZView class],
+                       @"Button": [RZButton class],
+                       @"Label": [RZLabel class]
+                       };
     
 }
 

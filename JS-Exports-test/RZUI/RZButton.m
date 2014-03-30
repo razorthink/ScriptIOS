@@ -62,8 +62,10 @@
 
 - (void)setEvent:(NSString *)event withHandler:(JSValue *)handler
 {
-    tapHandler = [JSManagedValue managedValueWithValue:handler];
-    [[JSContext currentContext].virtualMachine addManagedReference:tapHandler withOwner:self];
+    if ([event isEqualToString:@"tap"]) {
+        tapHandler = [JSManagedValue managedValueWithValue:handler];
+        [[JSContext currentContext].virtualMachine addManagedReference:tapHandler withOwner:self];
+    }
 }
 
 - (void)runTapHandler
