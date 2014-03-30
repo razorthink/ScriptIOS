@@ -27,6 +27,7 @@
 		619947F018E7D47200991D0E /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947EF18E7D47200991D0E /* AppContext.m */; };
 		619947F618E7E34400991D0E /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947F518E7E34400991D0E /* View.m */; };
 		619947F818E7E43000991D0E /* ui.js in Resources */ = {isa = PBXBuildFile; fileRef = 619947F718E7E43000991D0E /* ui.js */; };
+		619947FB18E8073500991D0E /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947FA18E8073500991D0E /* Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		619947F418E7E34400991D0E /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		619947F518E7E34400991D0E /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
 		619947F718E7E43000991D0E /* ui.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ui.js; sourceTree = "<group>"; };
+		619947F918E8073500991D0E /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		619947FA18E8073500991D0E /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				619947EA18E74AF100991D0E /* RootViewController.m */,
 				619947F418E7E34400991D0E /* View.h */,
 				619947F518E7E34400991D0E /* View.m */,
+				619947F918E8073500991D0E /* Utils.h */,
+				619947FA18E8073500991D0E /* Utils.m */,
 				619947EB18E74AF100991D0E /* RootViewController.xib */,
 				619947C518E745CA00991D0E /* Images.xcassets */,
 				619947BA18E745CA00991D0E /* Supporting Files */,
@@ -280,6 +285,7 @@
 				619947F618E7E34400991D0E /* View.m in Sources */,
 				619947C418E745CA00991D0E /* AppDelegate.m in Sources */,
 				619947EC18E74AF100991D0E /* RootViewController.m in Sources */,
+				619947FB18E8073500991D0E /* Utils.m in Sources */,
 				619947C018E745CA00991D0E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

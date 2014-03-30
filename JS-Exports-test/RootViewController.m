@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "AppContext.h"
 #import "View.h"
+#import "Utils.h"
 
 @interface RootViewController ()
 
@@ -40,13 +41,14 @@
     mainView.alpha = 0.5f;
     [self.view addSubview:mainView];
     
-    // context[@"MainView"] = mainView;
+    context[@"MainView"] = mainView;
+    context[@"Utils"] = [Utils class];
     
-//    NSError *error;
-//    NSString *scriptPath = [[NSBundle mainBundle] pathForResource:@"ui" ofType:@"js"];
-//    NSString *script = [NSString stringWithContentsOfFile:scriptPath encoding:NSUTF8StringEncoding error:&error];
+    NSError *error;
+    NSString *scriptPath = [[NSBundle mainBundle] pathForResource:@"ui" ofType:@"js"];
+    NSString *script = [NSString stringWithContentsOfFile:scriptPath encoding:NSUTF8StringEncoding error:&error];
     
-    // [context evaluateScript:script];
+    [context evaluateScript:script];
     NSLog(@"UI script executed");
     
 }

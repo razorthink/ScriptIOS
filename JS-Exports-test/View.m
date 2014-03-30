@@ -7,6 +7,8 @@
 //
 
 #import "View.h"
+#import "Utils.h"
+#import "AppContext.h"
 
 @implementation View
 
@@ -22,6 +24,15 @@
 -(void)set:(NSDictionary *)config
 {
     self.alpha = [config[@"alpha"] floatValue];
+    
+    self.backgroundColor = (UIColor *)config[@"background"];
+    
+    self.frame = [Utils makeFrame:config[@"frame"]];
+    
+}
+
+- (void)addSubNode:(UIView *)subNode {
+
 }
 
 /*

@@ -57,7 +57,7 @@
     JSValue *sandJS = context[@"sand"];
     Person *sand = [sandJS toObject];
     
-    NSLog(@"App: %@", sand.name);
+    NSLog(@"App: %@", sand);
     
     JSContext *test = [[AppContext alloc] init].context;
     [test evaluateScript:@"console.log(sand.name)"];
