@@ -1,14 +1,14 @@
 try {
     MainView.set({ background: Utils.makeColor([231, 76, 60, 1]) });
 
-    var subView = View.create();
+    var subView = RZView.create();
     MainView.addSubNode(subView);
     subView.set({
         frame: Utils.makeFrame([0, 400, 320, 168]),
         background: Utils.makeColor([0, 0, 0, 0.75])
     });
 
-    var button = Button.create();
+    var button = RZButton.create();
     subView.addSubNode(button);
     button.set({
         frame: Utils.makeFrame([30, 168 - 50, 260, 30]),
@@ -23,7 +23,7 @@ try {
         console.log("tap handler in JS");
     });
 
-    var label = Label.create();
+    var label = RZLabel.create();
     MainView.addSubNode(label);
     label.set({
         frame: Utils.makeFrame([30, 0, 260, 370]),

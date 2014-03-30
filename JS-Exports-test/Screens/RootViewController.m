@@ -8,10 +8,10 @@
 
 #import "RootViewController.h"
 #import "AppContext.h"
-#import "View.h"
+#import "RZView.h"
 #import "Utils.h"
-#import "Button.h"
-#import "Label.h"
+#import "RZButton.h"
+#import "RZLabel.h"
 
 @interface RootViewController ()
 
@@ -38,14 +38,14 @@
 
     context = [[AppContext alloc] init].context;
     
-    View *mainView = [[View alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    RZView *mainView = [[RZView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.view addSubview:mainView];
     
     context[@"MainView"] = mainView;
     context[@"Utils"] = [Utils class];
-    context[@"View"] = [View class];
-    context[@"Button"] = [Button class];
-    context[@"Label"] = [Label class];
+    context[@"RZView"] = [RZView class];
+    context[@"RZButton"] = [RZButton class];
+    context[@"RZLabel"] = [RZLabel class];
     
     NSError *error;
     NSString *scriptPath = [[NSBundle mainBundle] pathForResource:@"ui" ofType:@"js"];

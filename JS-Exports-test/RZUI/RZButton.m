@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Razorthink. All rights reserved.
 //
 
-#import "Button.h"
+#import "RZButton.h"
 #import "Utils.h"
 #import "AppContext.h"
 
-@implementation Button
+@implementation RZButton
 
 @synthesize tapHandler;
 
@@ -25,7 +25,7 @@
 
 + (id)create
 {
-    Button *button = [[Button alloc] init];
+    RZButton *button = [[RZButton alloc] init];
     return button;
 }
 

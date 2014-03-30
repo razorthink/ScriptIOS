@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Razorthink. All rights reserved.
 //
 
-#import "Label.h"
+#import "RZLabel.h"
 #import "Utils.h"
 
-@implementation Label
+@implementation RZLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -22,7 +22,7 @@
 
 + (id)create
 {
-    Label *button = [[Label alloc] init];
+    RZLabel *button = [[RZLabel alloc] init];
     return button;
 }
 

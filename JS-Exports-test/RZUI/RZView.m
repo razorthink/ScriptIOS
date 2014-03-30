@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Razorthink. All rights reserved.
 //
 
-#import "View.h"
+#import "RZView.h"
 #import "Utils.h"
 #import "AppContext.h"
 
-@implementation View
+@implementation RZView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -21,9 +21,9 @@
     return self;
 }
 
-+ (View *)create
++ (RZView *)create
 {
-    View *view = [[View alloc] init];
+    RZView *view = [[RZView alloc] init];
     return view;
 }
 
