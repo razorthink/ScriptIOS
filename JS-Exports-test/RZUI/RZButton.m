@@ -22,10 +22,11 @@
 
 @synthesize tapHandler;
 @synthesize
-nodeClass=_nodeClass,
-background=_background,
-frame=_frame,
-cornerRadius=_cornerRadius;
+        nodeClass=_nodeClass,
+        background=_background,
+        alpha=_alpha,
+        frame=_frame,
+        cornerRadius=_cornerRadius;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -40,6 +41,12 @@ cornerRadius=_cornerRadius;
 {
     RZButton *button = [[RZButton alloc] init];
     return button;
+}
+
+-(void)setAlpha:(CGFloat)alpha
+{
+    _alpha = alpha;
+    [super setAlpha:_alpha];
 }
 
 -(void)setBackground:(UIColor *)background

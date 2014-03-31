@@ -14,6 +14,7 @@
 @property UIColor *background;
 @property CGRect frame;
 @property CGFloat cornerRadius;
+@property CGFloat alpha;
 
 - (void)set:(JSValue *)config;
 - (void)append:(UIView *)child;

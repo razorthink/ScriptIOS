@@ -8,7 +8,7 @@ try {
 
     var buttons = $('class', 'actionBtn', App);
     _.each(buttons, function (btn) {
-        btn.set({cornerRadius: 15});
+        btn.cornerRadius = 15;
     });
 
     var circles = $('class', 'dots', App);

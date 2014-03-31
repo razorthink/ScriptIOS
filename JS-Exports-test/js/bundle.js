@@ -2,7 +2,7 @@
 
 module.exports = function () {
 
-    App.circles = UI.View.create();
+    App.circles = UI.Button.create();
     App.MainView.append(App.circles);
     App.circles.set({
         frame: Utils.makeFrame([28.5, 360, 280, 20])
@@ -17,6 +17,7 @@ module.exports = function () {
             cornerRadius: 10,
             class: "dots"
         });
+        App["circle_" + (i+1)].alpha = 0.5;
     }
 
 };
@@ -32,7 +33,7 @@ try {
 
     var buttons = $('class', 'actionBtn', App);
     _.each(buttons, function (btn) {
-        btn.set({cornerRadius: 15});
+        btn.cornerRadius = 15;
     });
 
     var circles = $('class', 'dots', App);
@@ -84,6 +85,7 @@ module.exports = function () {
         frame: Utils.makeFrame([30, 84 - 15, 260, 30]),
         title: "Tap for action",
     });
+
     App.button.on("tap", function () {
         App.subView.append(App.button2);
         App.button.set({ 
@@ -97,8 +99,6 @@ module.exports = function () {
             });
         });
     });
-    App.button.id = "123";
-    console.log(App.button.id);
 
     App.button2 = UI.Button.create();
     App.button2.set(buttonStyle);

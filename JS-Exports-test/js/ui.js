@@ -26,6 +26,7 @@ module.exports = function () {
         frame: Utils.makeFrame([30, 84 - 15, 260, 30]),
         title: "Tap for action",
     });
+
     App.button.on("tap", function () {
         App.subView.append(App.button2);
         App.button.set({ 
@@ -39,8 +40,6 @@ module.exports = function () {
             });
         });
     });
-    App.button.id = "123";
-    console.log(App.button.id);
 
     App.button2 = UI.Button.create();
     App.button2.set(buttonStyle);

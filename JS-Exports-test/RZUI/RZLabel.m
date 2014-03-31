@@ -20,6 +20,7 @@
 @synthesize
 nodeClass=_nodeClass,
 background=_background,
+alpha=_alpha,
 frame=_frame,
 cornerRadius=_cornerRadius;
 
@@ -36,6 +37,12 @@ cornerRadius=_cornerRadius;
 {
     RZLabel *button = [[RZLabel alloc] init];
     return button;
+}
+
+-(void)setAlpha:(CGFloat)alpha
+{
+    _alpha = alpha;
+    [super setAlpha:_alpha];
 }
 
 -(void)setBackground:(UIColor *)background
