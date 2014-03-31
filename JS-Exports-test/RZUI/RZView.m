@@ -10,7 +10,15 @@
 #import "Utils.h"
 #import "AppContext.h"
 
+@interface RZView ()
+
+@property NSString *nodeClass;
+
+@end
+
 @implementation RZView
+
+@synthesize nodeClass;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -44,6 +52,11 @@
     if (![config[@"cornerRadius"] isUndefined]) {
         self.layer.cornerRadius = [config[@"cornerRadius"] toDouble];
     }
+    
+    if (![config[@"class"] isUndefined]) {
+        nodeClass = [config[@"class"] toString];
+    }
+    
 }
 
 - (JSValue *)get:(NSString *)attr
@@ -62,6 +75,10 @@
     
     else if ([attr isEqualToString:@"cornerRadius"]) {
         return [JSValue valueWithDouble:self.layer.cornerRadius inContext:[JSContext currentContext]];
+    }
+    
+    else if ([attr isEqualToString:@"class"]) {
+        return [JSValue valueWithObject:nodeClass inContext:[JSContext currentContext]];
     }
     
     return nil;

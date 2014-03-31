@@ -1,3 +1,4 @@
+require('./circles')();
 
 module.exports = function () {
     
@@ -38,6 +39,8 @@ module.exports = function () {
             });
         });
     });
+    App.button.id = "123";
+    console.log(App.button.id);
 
     App.button2 = UI.Button.create();
     App.button2.set(buttonStyle);
@@ -67,6 +70,5 @@ module.exports = function () {
               + "ex molestias distinctio quidem doloribus soluta voluptates possimus ipsa.",
         font: "avenir", textAlign: "right", lines: 0
     });
-    App.label.background = Utils.makeColor([255, 255, 255, 1]);
 
 };

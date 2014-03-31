@@ -9,7 +9,15 @@
 #import "RZLabel.h"
 #import "Utils.h"
 
+@interface RZLabel ()
+
+@property NSString *nodeClass;
+
+@end
+
 @implementation RZLabel
+
+@synthesize nodeClass;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -65,6 +73,10 @@
         self.numberOfLines = [config[@"lines"] toInt32];
     }
     
+    if (![config[@"class"] isUndefined]) {
+        nodeClass = [config[@"class"] toString];
+    }
+    
 }
 
 - (JSValue *)get:(NSString *)attr
@@ -117,6 +129,10 @@
                 return [JSValue valueWithObject:@"natural" inContext:[JSContext currentContext]];
                 break;
         }
+    }
+    
+    else if ([attr isEqualToString:@"class"]) {
+        return [JSValue valueWithObject:nodeClass inContext:[JSContext currentContext]];
     }
     
     return nil;

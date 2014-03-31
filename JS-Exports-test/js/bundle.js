@@ -1,4 +1,27 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+
+module.exports = function () {
+
+    App.circles = UI.View.create();
+    App.MainView.append(App.circles);
+    App.circles.set({
+        frame: Utils.makeFrame([28.5, 360, 280, 20])
+    });
+
+    for (var i = 0; i < 8; i++) {
+        App["circle_" + (i+1)] = UI.View.create();
+        App.circles.append(App["circle_" + (i+1)]);
+        App["circle_" + (i+1)].set({
+            frame: Utils.makeFrame([35*i, 0, 20, 20]),
+            background: Utils.makeColor([255, 255, 255, 1]),
+            cornerRadius: 10,
+            class: "dots"
+        });
+    }
+
+};
+
+},{}],2:[function(require,module,exports){
 try {
 
     var _ = require('./underscore'),
@@ -7,17 +30,24 @@ try {
     // load UI from definition in ui.js
     require('./ui')();
 
-    var butt = $('class', 'actionBtn', App);
-    _.each(butt, function (butt) {
-        butt.set({cornerRadius: 10});
+    var buttons = $('class', 'actionBtn', App);
+    _.each(buttons, function (btn) {
+        btn.set({cornerRadius: 15});
     });
+
+    var circles = $('class', 'dots', App);
+    _.each(circles, function (dot) {
+        dot.alpha = 0.25;
+        dot.background = Utils.makeColor([0,0,0,1]);
+    });
+
 
 } catch (err) {
 
     console.error(err);
 
 }
-},{"./query":2,"./ui":3,"./underscore":4}],2:[function(require,module,exports){
+},{"./query":3,"./ui":4,"./underscore":5}],3:[function(require,module,exports){
 var _ = require("./underscore");
 
 module.exports = function (queryProp, queryValue, scope) {
@@ -25,7 +55,8 @@ module.exports = function (queryProp, queryValue, scope) {
         return elem.get(queryProp) == queryValue;
     });
 };
-},{"./underscore":4}],3:[function(require,module,exports){
+},{"./underscore":5}],4:[function(require,module,exports){
+require('./circles')();
 
 module.exports = function () {
     
@@ -66,6 +97,8 @@ module.exports = function () {
             });
         });
     });
+    App.button.id = "123";
+    console.log(App.button.id);
 
     App.button2 = UI.Button.create();
     App.button2.set(buttonStyle);
@@ -95,10 +128,9 @@ module.exports = function () {
               + "ex molestias distinctio quidem doloribus soluta voluptates possimus ipsa.",
         font: "avenir", textAlign: "right", lines: 0
     });
-    App.label.background = Utils.makeColor([255, 255, 255, 1]);
 
 };
-},{}],4:[function(require,module,exports){
+},{"./circles":1}],5:[function(require,module,exports){
 //     Underscore.js 1.6.0
 //     http://underscorejs.org
 //     (c) 2009-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -1444,4 +1476,4 @@ module.exports = function () {
   }
 }).call(this);
 
-},{}]},{},[1])
+},{}]},{},[2])
