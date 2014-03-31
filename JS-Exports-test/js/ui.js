@@ -1,10 +1,11 @@
+
 module.exports = function () {
+    
+    App.MainView.set({ background: Utils.makeColor([231, 76, 60, 1]) });
 
-    MainView.set({ background: Utils.makeColor([231, 76, 60, 1]) });
-
-    var subView = UI.View.create();
-    MainView.append(subView);
-    subView.set({
+    App.subView = UI.View.create();
+    App.MainView.append(App.subView);
+    App.subView.set({
         frame: Utils.makeFrame([0, 400, 320, 168]),
         background: Utils.makeColor([0, 0, 0, 0.75])
     });
@@ -14,49 +15,47 @@ module.exports = function () {
         background: Utils.makeColor([255, 255, 255, 1]),
         cornerRadius: 4,
         titleColor: Utils.makeColor([0, 0, 0, 0.75]),
-        font: "avenir", fontSize: 18
+        font: "avenir", fontSize: 18, class: "actionBtn"
     };
 
-    var button = UI.Button.create();
-    subView.append(button);
-    button.set(buttonStyle);
-    button.set({
+    App.button = UI.Button.create();
+    App.subView.append(App.button);
+    App.button.set(buttonStyle);
+    App.button.set({
         frame: Utils.makeFrame([30, 84 - 15, 260, 30]),
         title: "Tap for action",
     });
-    button.on("tap", function () {
-        subView.append(button2);
-        button.set({ 
+    App.button.on("tap", function () {
+        App.subView.append(App.button2);
+        App.button.set({ 
             title: "Reset",
             frame: Utils.makeFrame([30, 84 - 45, 260, 30])
         });
-        button.on("tap", function () {
-            button2.set({ 
+        App.button.on("tap", function () {
+            App.button2.set({ 
                 background: Utils.makeColor([255, 255, 255, 1]),
                 title: "Tap me! Tap me!"
             });
         });
     });
 
-    // console.log("button width", button.get('frame').width);
-
-    var button2 = UI.Button.create();
-    button2.set(buttonStyle);
-    button2.set({
+    App.button2 = UI.Button.create();
+    App.button2.set(buttonStyle);
+    App.button2.set({
         frame: Utils.makeFrame([30, 84 + 15, 260, 30]),
         title: "Tap me! Tap me!"
     });
 
-    button2.on("tap", function () {
-        button2.set({
+    App.button2.on("tap", function () {
+        App.button2.set({
             background: Utils.makeColor([241, 196, 15, 1.0]),
             title: "I turned yellow!"
         });
     });
 
-    var label = UI.Label.create();
-    MainView.append(label);
-    label.set({
+    App.label = UI.Label.create();
+    App.MainView.append(App.label);
+    App.label.set({
         frame: Utils.makeFrame([30, 50, 260, 320]),
         // background: Utils.makeColor([255, 255, 255, 1]),
         textColor: Utils.makeColor([255, 255, 255, 1]),
@@ -68,6 +67,6 @@ module.exports = function () {
               + "ex molestias distinctio quidem doloribus soluta voluptates possimus ipsa.",
         font: "avenir", textAlign: "right", lines: 0
     });
-    label.background = Utils.makeColor([255, 255, 255, 1]);
+    App.label.background = Utils.makeColor([255, 255, 255, 1]);
 
 };

@@ -93,6 +93,10 @@
         return [JSValue valueWithDouble:self.layer.cornerRadius inContext:[JSContext currentContext]];
     }
     
+    else if ([attr isEqualToString:@"class"]) {
+        return [JSValue valueWithObject:nodeClass inContext:[JSContext currentContext]];
+    }
+    
     return nil;
 }
 

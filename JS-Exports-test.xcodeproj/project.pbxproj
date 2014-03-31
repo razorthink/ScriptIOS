@@ -27,7 +27,6 @@
 		619947D918E745CA00991D0E /* JS_Exports_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947D818E745CA00991D0E /* JS_Exports_testTests.m */; };
 		619947E318E745D200991D0E /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947E218E745D200991D0E /* JavaScriptCore.framework */; };
 		619947F018E7D47200991D0E /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947EF18E7D47200991D0E /* AppContext.m */; };
-		61BE311618E944A900A0BF9C /* underscore.js in Resources */ = {isa = PBXBuildFile; fileRef = 61BE311518E944A900A0BF9C /* underscore.js */; };
 		61BE311818E946EE00A0BF9C /* bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 61BE311718E946EE00A0BF9C /* bundle.js */; };
 		61BE311A18E947E200A0BF9C /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 61BE311918E947E200A0BF9C /* main.js */; };
 /* End PBXBuildFile section */
@@ -73,7 +72,6 @@
 		619947E218E745D200991D0E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		619947EE18E7D47200991D0E /* AppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppContext.h; sourceTree = "<group>"; };
 		619947EF18E7D47200991D0E /* AppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppContext.m; sourceTree = "<group>"; };
-		61BE311518E944A900A0BF9C /* underscore.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = underscore.js; sourceTree = "<group>"; };
 		61BE311718E946EE00A0BF9C /* bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle.js; sourceTree = "<group>"; };
 		61BE311918E947E200A0BF9C /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,7 +106,6 @@
 			children = (
 				61BE311718E946EE00A0BF9C /* bundle.js */,
 				613DA8BC18E88A1E0055C4E0 /* ui.js */,
-				61BE311518E944A900A0BF9C /* underscore.js */,
 				61BE311918E947E200A0BF9C /* main.js */,
 			);
 			path = js;
@@ -302,7 +299,6 @@
 				61BE311818E946EE00A0BF9C /* bundle.js in Resources */,
 				61BE311A18E947E200A0BF9C /* main.js in Resources */,
 				613DA8CD18E88A1E0055C4E0 /* ui.js in Resources */,
-				61BE311618E944A900A0BF9C /* underscore.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

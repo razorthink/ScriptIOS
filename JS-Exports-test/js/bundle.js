@@ -1,24 +1,39 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 try {
 
-    var _ = require('./underscore');
-    var ui = require('./ui');
+    var _ = require('./underscore'),
+        $ = require('./query');
+            
+    // load UI from definition in ui.js
+    require('./ui')();
 
-    ui();
+    var butt = $('class', 'actionBtn', App);
+    _.each(butt, function (butt) {
+        butt.set({cornerRadius: 10});
+    });
 
 } catch (err) {
 
     console.error(err);
 
 }
-},{"./ui":2,"./underscore":3}],2:[function(require,module,exports){
+},{"./query":2,"./ui":3,"./underscore":4}],2:[function(require,module,exports){
+var _ = require("./underscore");
+
+module.exports = function (queryProp, queryValue, scope) {
+    return _.filter(scope, function (elem) {
+        return elem.get(queryProp) == queryValue;
+    });
+};
+},{"./underscore":4}],3:[function(require,module,exports){
+
 module.exports = function () {
+    
+    App.MainView.set({ background: Utils.makeColor([231, 76, 60, 1]) });
 
-    MainView.set({ background: Utils.makeColor([231, 76, 60, 1]) });
-
-    var subView = UI.View.create();
-    MainView.append(subView);
-    subView.set({
+    App.subView = UI.View.create();
+    App.MainView.append(App.subView);
+    App.subView.set({
         frame: Utils.makeFrame([0, 400, 320, 168]),
         background: Utils.makeColor([0, 0, 0, 0.75])
     });
@@ -28,49 +43,47 @@ module.exports = function () {
         background: Utils.makeColor([255, 255, 255, 1]),
         cornerRadius: 4,
         titleColor: Utils.makeColor([0, 0, 0, 0.75]),
-        font: "avenir", fontSize: 18
+        font: "avenir", fontSize: 18, class: "actionBtn"
     };
 
-    var button = UI.Button.create();
-    subView.append(button);
-    button.set(buttonStyle);
-    button.set({
+    App.button = UI.Button.create();
+    App.subView.append(App.button);
+    App.button.set(buttonStyle);
+    App.button.set({
         frame: Utils.makeFrame([30, 84 - 15, 260, 30]),
         title: "Tap for action",
     });
-    button.on("tap", function () {
-        subView.append(button2);
-        button.set({ 
+    App.button.on("tap", function () {
+        App.subView.append(App.button2);
+        App.button.set({ 
             title: "Reset",
             frame: Utils.makeFrame([30, 84 - 45, 260, 30])
         });
-        button.on("tap", function () {
-            button2.set({ 
+        App.button.on("tap", function () {
+            App.button2.set({ 
                 background: Utils.makeColor([255, 255, 255, 1]),
                 title: "Tap me! Tap me!"
             });
         });
     });
 
-    // console.log("button width", button.get('frame').width);
-
-    var button2 = UI.Button.create();
-    button2.set(buttonStyle);
-    button2.set({
+    App.button2 = UI.Button.create();
+    App.button2.set(buttonStyle);
+    App.button2.set({
         frame: Utils.makeFrame([30, 84 + 15, 260, 30]),
         title: "Tap me! Tap me!"
     });
 
-    button2.on("tap", function () {
-        button2.set({
+    App.button2.on("tap", function () {
+        App.button2.set({
             background: Utils.makeColor([241, 196, 15, 1.0]),
             title: "I turned yellow!"
         });
     });
 
-    var label = UI.Label.create();
-    MainView.append(label);
-    label.set({
+    App.label = UI.Label.create();
+    App.MainView.append(App.label);
+    App.label.set({
         frame: Utils.makeFrame([30, 50, 260, 320]),
         // background: Utils.makeColor([255, 255, 255, 1]),
         textColor: Utils.makeColor([255, 255, 255, 1]),
@@ -82,10 +95,10 @@ module.exports = function () {
               + "ex molestias distinctio quidem doloribus soluta voluptates possimus ipsa.",
         font: "avenir", textAlign: "right", lines: 0
     });
-    label.background = Utils.makeColor([255, 255, 255, 1]);
+    App.label.background = Utils.makeColor([255, 255, 255, 1]);
 
 };
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 //     Underscore.js 1.6.0
 //     http://underscorejs.org
 //     (c) 2009-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors

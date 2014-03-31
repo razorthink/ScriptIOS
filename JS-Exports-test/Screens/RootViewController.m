@@ -41,18 +41,14 @@
     RZView *mainView = [[RZView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.view addSubview:mainView];
     
-    context[@"MainView"] = mainView;
+    context[@"App"] = @{ @"MainView": mainView };
     
     NSError *error = nil;
     NSString *scriptPath = [[NSBundle mainBundle] pathForResource:@"bundle" ofType:@"js"];
     NSString *script = [NSString stringWithContentsOfFile:scriptPath encoding:NSUTF8StringEncoding error:&error];
-    NSLog(@"%@", script);
-    
     
     if (!error) { [context evaluateScript:script]; }
-    else NSLog(@"file exec error");
-    
-    NSLog(@"UI script executed");
+    else NSLog(@"error loading JS from file");
     
 }
 
