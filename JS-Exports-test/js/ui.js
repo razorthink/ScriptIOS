@@ -1,8 +1,9 @@
-try {
+module.exports = function () {
+
     MainView.set({ background: Utils.makeColor([231, 76, 60, 1]) });
 
     var subView = UI.View.create();
-    MainView.addSubNode(subView);
+    MainView.append(subView);
     subView.set({
         frame: Utils.makeFrame([0, 400, 320, 168]),
         background: Utils.makeColor([0, 0, 0, 0.75])
@@ -17,14 +18,14 @@ try {
     };
 
     var button = UI.Button.create();
-    subView.addSubNode(button);
+    subView.append(button);
     button.set(buttonStyle);
     button.set({
         frame: Utils.makeFrame([30, 84 - 15, 260, 30]),
         title: "Tap for action",
     });
     button.on("tap", function () {
-        subView.addSubNode(button2);
+        subView.append(button2);
         button.set({ 
             title: "Reset",
             frame: Utils.makeFrame([30, 84 - 45, 260, 30])
@@ -54,7 +55,7 @@ try {
     });
 
     var label = UI.Label.create();
-    MainView.addSubNode(label);
+    MainView.append(label);
     label.set({
         frame: Utils.makeFrame([30, 50, 260, 320]),
         // background: Utils.makeColor([255, 255, 255, 1]),
@@ -69,8 +70,4 @@ try {
     });
     label.background = Utils.makeColor([255, 255, 255, 1]);
 
-    // console.log(label.get('textAlign'));
-
-} catch (err) {
-    console.error(err);
-}
+};

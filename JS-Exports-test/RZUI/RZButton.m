@@ -10,9 +10,18 @@
 #import "Utils.h"
 #import "AppContext.h"
 
+@interface RZButton ()
+
+@property NSString *nodeClass;
+
+@property JSManagedValue *tapHandler;
+
+@end
+
 @implementation RZButton
 
 @synthesize tapHandler;
+@synthesize nodeClass;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -60,6 +69,10 @@
         [self.titleLabel setFont:[UIFont fontWithName:[config[@"font"] toString] size:size]];
     }
     
+    if (![config[@"class"] isUndefined]) {
+        nodeClass = [config[@"class"] toString];
+    }
+    
 }
 
 - (JSValue *)get:(NSString *)attr
@@ -96,8 +109,8 @@
     [[tapHandler value] callWithArguments:@[]];
 }
 
-- (void)addSubNode:(UIView *)subNode {
-    [self addSubview:subNode];
+- (void)append:(UIView *)child {
+    [self addSubview:child];
 }
 
 /*

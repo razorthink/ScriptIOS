@@ -43,11 +43,15 @@
     
     context[@"MainView"] = mainView;
     
-    NSError *error;
-    NSString *scriptPath = [[NSBundle mainBundle] pathForResource:@"ui" ofType:@"js"];
+    NSError *error = nil;
+    NSString *scriptPath = [[NSBundle mainBundle] pathForResource:@"bundle" ofType:@"js"];
     NSString *script = [NSString stringWithContentsOfFile:scriptPath encoding:NSUTF8StringEncoding error:&error];
+    NSLog(@"%@", script);
     
-    [context evaluateScript:script];
+    
+    if (!error) { [context evaluateScript:script]; }
+    else NSLog(@"file exec error");
+    
     NSLog(@"UI script executed");
     
 }

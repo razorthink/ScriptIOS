@@ -67,8 +67,8 @@
     return nil;
 }
 
-- (void)addSubNode:(UIView *)subNode {
-    [self addSubview:subNode];
+- (void)append:(UIView *)child {
+    [self addSubview:child];
 }
 
 /*

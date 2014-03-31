@@ -11,13 +11,12 @@
 
 @protocol ButtonJSExports <JSExport>
 
-
-@property JSManagedValue *tapHandler;
-
+// methods
 - (void)set:(JSValue *)config;
-- (void)addSubNode:(UIView *)subNode;
+- (void)append:(UIView *)child;
 - (JSValue *)get:(NSString *)attr;
 
+// event handler setters
 JSExportAs(on, - (void)setEvent:(NSString *)event withHandler:(JSValue *)handler);
 
 + (id)create;

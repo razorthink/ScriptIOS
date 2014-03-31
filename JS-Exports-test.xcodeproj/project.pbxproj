@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		613DA8CB18E88A1E0055C4E0 /* Person.js in Resources */ = {isa = PBXBuildFile; fileRef = 613DA8BA18E88A1E0055C4E0 /* Person.js */; };
-		613DA8CC18E88A1E0055C4E0 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 613DA8BB18E88A1E0055C4E0 /* script.js */; };
 		613DA8CD18E88A1E0055C4E0 /* ui.js in Resources */ = {isa = PBXBuildFile; fileRef = 613DA8BC18E88A1E0055C4E0 /* ui.js */; };
 		613DA8CE18E88A1E0055C4E0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8BF18E88A1E0055C4E0 /* RootViewController.m */; };
-		613DA8CF18E88A1E0055C4E0 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613DA8C018E88A1E0055C4E0 /* RootViewController.xib */; };
 		613DA8D018E88A1E0055C4E0 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8C318E88A1E0055C4E0 /* Utils.m */; };
 		613DA8D118E88A1E0055C4E0 /* RZButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8C618E88A1E0055C4E0 /* RZButton.m */; };
 		613DA8D218E88A1E0055C4E0 /* RZLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8C818E88A1E0055C4E0 /* RZLabel.m */; };
@@ -30,6 +27,9 @@
 		619947D918E745CA00991D0E /* JS_Exports_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947D818E745CA00991D0E /* JS_Exports_testTests.m */; };
 		619947E318E745D200991D0E /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947E218E745D200991D0E /* JavaScriptCore.framework */; };
 		619947F018E7D47200991D0E /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947EF18E7D47200991D0E /* AppContext.m */; };
+		61BE311618E944A900A0BF9C /* underscore.js in Resources */ = {isa = PBXBuildFile; fileRef = 61BE311518E944A900A0BF9C /* underscore.js */; };
+		61BE311818E946EE00A0BF9C /* bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 61BE311718E946EE00A0BF9C /* bundle.js */; };
+		61BE311A18E947E200A0BF9C /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 61BE311918E947E200A0BF9C /* main.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		613DA8BA18E88A1E0055C4E0 /* Person.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Person.js; sourceTree = "<group>"; };
-		613DA8BB18E88A1E0055C4E0 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		613DA8BC18E88A1E0055C4E0 /* ui.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ui.js; sourceTree = "<group>"; };
 		613DA8BE18E88A1E0055C4E0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		613DA8BF18E88A1E0055C4E0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		613DA8C018E88A1E0055C4E0 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		613DA8C218E88A1E0055C4E0 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		613DA8C318E88A1E0055C4E0 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		613DA8C518E88A1E0055C4E0 /* RZButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZButton.h; sourceTree = "<group>"; };
@@ -76,6 +73,9 @@
 		619947E218E745D200991D0E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		619947EE18E7D47200991D0E /* AppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppContext.h; sourceTree = "<group>"; };
 		619947EF18E7D47200991D0E /* AppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppContext.m; sourceTree = "<group>"; };
+		61BE311518E944A900A0BF9C /* underscore.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = underscore.js; sourceTree = "<group>"; };
+		61BE311718E946EE00A0BF9C /* bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle.js; sourceTree = "<group>"; };
+		61BE311918E947E200A0BF9C /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +106,10 @@
 		613DA8B918E88A1E0055C4E0 /* js */ = {
 			isa = PBXGroup;
 			children = (
-				613DA8BA18E88A1E0055C4E0 /* Person.js */,
-				613DA8BB18E88A1E0055C4E0 /* script.js */,
+				61BE311718E946EE00A0BF9C /* bundle.js */,
 				613DA8BC18E88A1E0055C4E0 /* ui.js */,
+				61BE311518E944A900A0BF9C /* underscore.js */,
+				61BE311918E947E200A0BF9C /* main.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
@@ -118,7 +119,6 @@
 			children = (
 				613DA8BE18E88A1E0055C4E0 /* RootViewController.h */,
 				613DA8BF18E88A1E0055C4E0 /* RootViewController.m */,
-				613DA8C018E88A1E0055C4E0 /* RootViewController.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -299,10 +299,10 @@
 			files = (
 				619947BE18E745CA00991D0E /* InfoPlist.strings in Resources */,
 				619947C618E745CA00991D0E /* Images.xcassets in Resources */,
-				613DA8CF18E88A1E0055C4E0 /* RootViewController.xib in Resources */,
+				61BE311818E946EE00A0BF9C /* bundle.js in Resources */,
+				61BE311A18E947E200A0BF9C /* main.js in Resources */,
 				613DA8CD18E88A1E0055C4E0 /* ui.js in Resources */,
-				613DA8CC18E88A1E0055C4E0 /* script.js in Resources */,
-				613DA8CB18E88A1E0055C4E0 /* Person.js in Resources */,
+				61BE311618E944A900A0BF9C /* underscore.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

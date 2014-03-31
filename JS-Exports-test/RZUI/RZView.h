@@ -12,7 +12,7 @@
 @protocol ViewJSExports <JSExport>
 
 - (void)set:(JSValue *)config;
-- (void)addSubNode:(UIView *)subNode;
+- (void)append:(UIView *)child;
 - (JSValue *)get:(NSString *)attr;
 
 + (id)create;
