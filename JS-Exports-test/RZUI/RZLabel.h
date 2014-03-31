@@ -11,6 +11,10 @@
 
 @protocol LabelJSExports <JSExport>
 
+@property UIColor *background;
+@property CGRect frame;
+@property CGFloat cornerRadius;
+
 - (void)set:(JSValue *)config;
 - (void)append:(UIView *)child;
 - (JSValue *)get:(NSString *)attr;

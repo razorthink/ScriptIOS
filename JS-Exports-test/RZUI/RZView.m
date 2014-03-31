@@ -18,13 +18,16 @@
 
 @implementation RZView
 
-@synthesize nodeClass;
+@synthesize
+nodeClass=_nodeClass,
+background=_background,
+frame=_frame,
+cornerRadius=_cornerRadius;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-    
     }
     return self;
 }
@@ -33,6 +36,26 @@
 {
     RZView *view = [[RZView alloc] init];
     return view;
+}
+
+-(void)setBackground:(UIColor *)background
+{
+    [super setBackgroundColor:background];
+}
+
+-(void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+}
+
+-(void)setCornerRadius:(CGFloat)cornerRadius
+{
+    self.layer.cornerRadius = cornerRadius;
+}
+
+-(CGFloat)cornerRadius
+{
+    return self.layer.cornerRadius;
 }
 
 -(void)set:(JSValue *)config
@@ -54,7 +77,7 @@
     }
     
     if (![config[@"class"] isUndefined]) {
-        nodeClass = [config[@"class"] toString];
+        _nodeClass = [config[@"class"] toString];
     }
     
 }
@@ -78,7 +101,7 @@
     }
     
     else if ([attr isEqualToString:@"class"]) {
-        return [JSValue valueWithObject:nodeClass inContext:[JSContext currentContext]];
+        return [JSValue valueWithObject:_nodeClass inContext:[JSContext currentContext]];
     }
     
     return nil;

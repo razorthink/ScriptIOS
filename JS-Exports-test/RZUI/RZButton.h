@@ -11,6 +11,10 @@
 
 @protocol ButtonJSExports <JSExport>
 
+@property UIColor *background;
+@property CGRect frame;
+@property CGFloat cornerRadius;
+
 // methods
 - (void)set:(JSValue *)config;
 - (void)append:(UIView *)child;

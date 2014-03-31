@@ -13,7 +13,7 @@ try {
 
     var circles = $('class', 'dots', App);
     _.each(circles, function (dot) {
-        dot.alpha = 0.25;
+        dot.set({alpha: 0.25});
         dot.background = Utils.makeColor([0,0,0,1]);
     });
 
