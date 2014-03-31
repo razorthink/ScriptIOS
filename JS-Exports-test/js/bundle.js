@@ -2,27 +2,28 @@
 
 module.exports = function () {
 
-    App.circles = UI.Button.create();
+    App.circles = UI.View.create();
     App.MainView.append(App.circles);
     App.circles.set({
-        frame: Utils.makeFrame([28.5, 360, 280, 20])
+        frame: Utils.makeFrame([0, 460, 320, 40]),
+        background: Utils.makeColor([255, 255, 255, 1])
     });
 
     for (var i = 0; i < 8; i++) {
-        App["circle_" + (i+1)] = UI.View.create();
+        App["circle_" + (i+1)] = UI.Button.create();
         App.circles.append(App["circle_" + (i+1)]);
         App["circle_" + (i+1)].set({
-            frame: Utils.makeFrame([35*i, 0, 20, 20]),
-            background: Utils.makeColor([255, 255, 255, 1]),
+            frame: Utils.makeFrame([33*(i+1), 10, 20, 20]),
+            background: Utils.makeColor([0, 0, 0, 0.25]),
             cornerRadius: 10,
             class: "dots"
         });
-        App["circle_" + (i+1)].alpha = 0.5;
     }
 
 };
 
 },{}],2:[function(require,module,exports){
+
 try {
 
     var _ = require('./underscore'),
@@ -36,10 +37,15 @@ try {
         btn.cornerRadius = 15;
     });
 
+    console.log('test');
+
     var circles = $('class', 'dots', App);
     _.each(circles, function (dot) {
-        dot.set({alpha: 0.25});
-        dot.background = Utils.makeColor([0,0,0,1]);
+        dot.on('tap', function () {
+            console.log(App.MainView.get('background'));
+            dot.background = App.MainView.get('background');
+            console.log(dot.get('background'));
+        });
     });
 
 
@@ -57,6 +63,10 @@ module.exports = function (queryProp, queryValue, scope) {
     });
 };
 },{"./underscore":5}],4:[function(require,module,exports){
+var randomNumber = function(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
 require('./circles')();
 
 module.exports = function () {
@@ -66,12 +76,11 @@ module.exports = function () {
     App.subView = UI.View.create();
     App.MainView.append(App.subView);
     App.subView.set({
-        frame: Utils.makeFrame([0, 400, 320, 168]),
+        frame: Utils.makeFrame([0, 500, 320, 68]),
         background: Utils.makeColor([0, 0, 0, 0.75])
     });
 
     var buttonStyle = {
-        alpha: 0.95,
         background: Utils.makeColor([255, 255, 255, 1]),
         cornerRadius: 4,
         titleColor: Utils.makeColor([0, 0, 0, 0.75]),
@@ -82,43 +91,18 @@ module.exports = function () {
     App.subView.append(App.button);
     App.button.set(buttonStyle);
     App.button.set({
-        frame: Utils.makeFrame([30, 84 - 15, 260, 30]),
-        title: "Tap for action",
+        frame: Utils.makeFrame([30, 20, 260, 30]),
+        title: "Shuffle Color",
     });
 
     App.button.on("tap", function () {
-        App.subView.append(App.button2);
-        App.button.set({ 
-            title: "Reset",
-            frame: Utils.makeFrame([30, 84 - 45, 260, 30])
-        });
-        App.button.on("tap", function () {
-            App.button2.set({ 
-                background: Utils.makeColor([255, 255, 255, 1]),
-                title: "Tap me! Tap me!"
-            });
-        });
-    });
-
-    App.button2 = UI.Button.create();
-    App.button2.set(buttonStyle);
-    App.button2.set({
-        frame: Utils.makeFrame([30, 84 + 15, 260, 30]),
-        title: "Tap me! Tap me!"
-    });
-
-    App.button2.on("tap", function () {
-        App.button2.set({
-            background: Utils.makeColor([241, 196, 15, 1.0]),
-            title: "I turned yellow!"
-        });
+        App.MainView.background = Utils.makeColor([randomNumber(0, 255),randomNumber(0, 255),randomNumber(0, 255),1]);
     });
 
     App.label = UI.Label.create();
     App.MainView.append(App.label);
     App.label.set({
-        frame: Utils.makeFrame([30, 50, 260, 320]),
-        // background: Utils.makeColor([255, 255, 255, 1]),
+        frame: Utils.makeFrame([30, 120, 260, 320]),
         textColor: Utils.makeColor([255, 255, 255, 1]),
         text: "\"I've always wondered if these kinda things were possile;"
               + "I finally have a solution now."
@@ -129,7 +113,18 @@ module.exports = function () {
         font: "avenir", textAlign: "right", lines: 0
     });
 
+    App.title = UI.Label.create();
+    App.MainView.append(App.title);
+    App.title.set({
+        frame: Utils.makeFrame([0, 45, 320, 80]),
+        textColor: Utils.makeColor([255, 255, 255, 1]),
+        text: "Random Color",
+        fontSize: 30, font: "avenir", textAlign: "center",
+        background: Utils.makeColor([0, 0, 0, 0.1])
+    });
+
 };
+
 },{"./circles":1}],5:[function(require,module,exports){
 //     Underscore.js 1.6.0
 //     http://underscorejs.org

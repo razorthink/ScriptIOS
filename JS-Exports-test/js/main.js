@@ -1,3 +1,4 @@
+
 try {
 
     var _ = require('./underscore'),
@@ -11,10 +12,15 @@ try {
         btn.cornerRadius = 15;
     });
 
+    console.log('test');
+
     var circles = $('class', 'dots', App);
     _.each(circles, function (dot) {
-        dot.set({alpha: 0.25});
-        dot.background = Utils.makeColor([0,0,0,1]);
+        dot.on('tap', function () {
+            console.log(App.MainView.get('background'));
+            dot.background = App.MainView.get('background');
+            console.log(dot.get('background'));
+        });
     });
 
 

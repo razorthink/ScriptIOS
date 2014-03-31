@@ -1,3 +1,7 @@
+var randomNumber = function(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
 require('./circles')();
 
 module.exports = function () {
@@ -7,12 +11,11 @@ module.exports = function () {
     App.subView = UI.View.create();
     App.MainView.append(App.subView);
     App.subView.set({
-        frame: Utils.makeFrame([0, 400, 320, 168]),
+        frame: Utils.makeFrame([0, 500, 320, 68]),
         background: Utils.makeColor([0, 0, 0, 0.75])
     });
 
     var buttonStyle = {
-        alpha: 0.95,
         background: Utils.makeColor([255, 255, 255, 1]),
         cornerRadius: 4,
         titleColor: Utils.makeColor([0, 0, 0, 0.75]),
@@ -23,43 +26,18 @@ module.exports = function () {
     App.subView.append(App.button);
     App.button.set(buttonStyle);
     App.button.set({
-        frame: Utils.makeFrame([30, 84 - 15, 260, 30]),
-        title: "Tap for action",
+        frame: Utils.makeFrame([30, 20, 260, 30]),
+        title: "Shuffle Color",
     });
 
     App.button.on("tap", function () {
-        App.subView.append(App.button2);
-        App.button.set({ 
-            title: "Reset",
-            frame: Utils.makeFrame([30, 84 - 45, 260, 30])
-        });
-        App.button.on("tap", function () {
-            App.button2.set({ 
-                background: Utils.makeColor([255, 255, 255, 1]),
-                title: "Tap me! Tap me!"
-            });
-        });
-    });
-
-    App.button2 = UI.Button.create();
-    App.button2.set(buttonStyle);
-    App.button2.set({
-        frame: Utils.makeFrame([30, 84 + 15, 260, 30]),
-        title: "Tap me! Tap me!"
-    });
-
-    App.button2.on("tap", function () {
-        App.button2.set({
-            background: Utils.makeColor([241, 196, 15, 1.0]),
-            title: "I turned yellow!"
-        });
+        App.MainView.background = Utils.makeColor([randomNumber(0, 255),randomNumber(0, 255),randomNumber(0, 255),1]);
     });
 
     App.label = UI.Label.create();
     App.MainView.append(App.label);
     App.label.set({
-        frame: Utils.makeFrame([30, 50, 260, 320]),
-        // background: Utils.makeColor([255, 255, 255, 1]),
+        frame: Utils.makeFrame([30, 120, 260, 320]),
         textColor: Utils.makeColor([255, 255, 255, 1]),
         text: "\"I've always wondered if these kinda things were possile;"
               + "I finally have a solution now."
@@ -68,6 +46,16 @@ module.exports = function () {
               + "Optio, animi iste cumque voluptas quis earum perferendis praesentium"
               + "ex molestias distinctio quidem doloribus soluta voluptates possimus ipsa.",
         font: "avenir", textAlign: "right", lines: 0
+    });
+
+    App.title = UI.Label.create();
+    App.MainView.append(App.title);
+    App.title.set({
+        frame: Utils.makeFrame([0, 45, 320, 80]),
+        textColor: Utils.makeColor([255, 255, 255, 1]),
+        text: "Random Color",
+        fontSize: 30, font: "avenir", textAlign: "center",
+        background: Utils.makeColor([0, 0, 0, 0.1])
     });
 
 };
