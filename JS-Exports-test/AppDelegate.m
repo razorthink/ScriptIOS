@@ -12,6 +12,7 @@
 #import "RZUI/RZButton.h"
 #import "RZUI/RZLabel.h"
 #import "RZUI/RZView.h"
+#import "RZUI/RZImageView.h"
 #import "Utils.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
@@ -54,7 +55,8 @@
     context[@"UI"] = @{
                        @"View": [RZView class],
                        @"Button": [RZButton class],
-                       @"Label": [RZLabel class]
+                       @"Label": [RZLabel class],
+                       @"ImageView": [RZImageView class]
                        };
     
 }

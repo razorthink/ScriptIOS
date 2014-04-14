@@ -2,7 +2,7 @@ var randomNumber = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-var c = require('./circles');
+require('./circles')();
 
 module.exports = function () {
     
@@ -39,9 +39,9 @@ module.exports = function () {
     App.label.set({
         frame: Utils.makeFrame([30, 120, 260, 320]),
         textColor: Utils.makeColor([255, 255, 255, 1]),
-        text: "\"I've always wondered if these kinda things were possile;"
+        text: "\"I've always wondered if these kinda things were possible;"
               + "I finally have a solution now."
-              + "\rAnd the best part is that i build this thing myself!\""
+              + "\rAnd the best part is that i built this thing myself with Shrisha!\""
               + "\rLorem ipsum dolor sit amet, consectetur adipisicing elit."
               + "Optio, animi iste cumque voluptas quis earum perferendis praesentium"
               + "ex molestias distinctio quidem doloribus soluta voluptates possimus ipsa.",
@@ -57,5 +57,13 @@ module.exports = function () {
         fontSize: 30, font: "avenir", textAlign: "center",
         background: Utils.makeColor([0, 0, 0, 0.1])
     });
+    
+    App.logo = UI.ImageView.create();
+    App.MainView.append(App.logo);
+    App.logo.set({
+        frame: Utils.makeFrame([10, 60, 45, 45]),
+        image: "palette.png"
+    });
+    
 
 };

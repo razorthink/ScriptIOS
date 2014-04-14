@@ -7,7 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <JavaScriptCore/JavaScriptCore.h>
 
-@interface RZImageView : UIImageView
+@protocol ImageViewJSExports <JSExport>
+
+@property UIImage *image;
+@property CGRect frame;
+@property BOOL userInteraction;
+
+- (void)set:(JSValue *)config;
+- (void)append:(UIView *)child;
+- (JSValue *)get:(NSString *)attr;
+
++ (id)create;
+
+@end
+
+@interface RZImageView : UIImageView <ImageViewJSExports>
 
 @end

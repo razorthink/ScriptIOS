@@ -12,6 +12,7 @@
 #import "Utils.h"
 #import "RZButton.h"
 #import "RZLabel.h"
+#import "RZImageView.h"
 
 @interface RootViewController ()
 

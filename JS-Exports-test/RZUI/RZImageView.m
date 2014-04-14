@@ -8,7 +8,20 @@
 
 #import "RZImageView.h"
 
+@interface RZImageView ()
+
+@property NSString *nodeClass;
+
+@end
+
 @implementation RZImageView
+
+@synthesize
+nodeClass=_nodeClass,
+image=_image,
+frame=_frame,
+userInteraction=_userInteraction;
+
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -19,13 +32,61 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
++ (RZImageView *)create
 {
-    // Drawing code
+    RZImageView *view = [[RZImageView alloc] init];
+    return view;
 }
-*/
+
+-(void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+}
+
+-(void)set:(JSValue *)config
+{
+    if (![config[@"image"] isUndefined]) {
+        [self setImage:[UIImage imageNamed:[config[@"image"] toString]]];
+    }
+    
+    if (![config[@"frame"] isUndefined]) {
+        self.frame = [config[@"frame"] toRect];
+    }
+    
+    if (![config[@"userInteraction"] isUndefined]) {
+        self.userInteractionEnabled = [config[@"userInteraction"] toString];
+    }
+    
+    if (![config[@"class"] isUndefined]) {
+        _nodeClass = [config[@"class"] toString];
+    }
+    
+}
+
+- (JSValue *)get:(NSString *)attr
+{
+    
+    if ([attr isEqualToString:@"image"]) {
+        return [JSValue valueWithObject:[self image] inContext:[JSContext currentContext]];
+    }
+    
+    else if ([attr isEqualToString:@"frame"]) {
+        return [JSValue valueWithRect:self.frame inContext:[JSContext currentContext]];
+    }
+    
+    else if ([attr isEqualToString:@"userInteraction"]) {
+        return [JSValue valueWithBool:self.userInteractionEnabled inContext:[JSContext currentContext]];
+    }
+    
+    else if ([attr isEqualToString:@"class"]) {
+        return [JSValue valueWithObject:_nodeClass inContext:[JSContext currentContext]];
+    }
+    
+    return nil;
+}
+
+- (void)append:(UIView *)child {
+    [self addSubview:child];
+}
 
 @end
