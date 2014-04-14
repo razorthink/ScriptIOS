@@ -14,6 +14,7 @@
 		613DA8D118E88A1E0055C4E0 /* RZButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8C618E88A1E0055C4E0 /* RZButton.m */; };
 		613DA8D218E88A1E0055C4E0 /* RZLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8C818E88A1E0055C4E0 /* RZLabel.m */; };
 		613DA8D318E88A1E0055C4E0 /* RZView.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8CA18E88A1E0055C4E0 /* RZView.m */; };
+		61911A0718FBDD3E00A48923 /* RZImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A0618FBDD3E00A48923 /* RZImageView.m */; };
 		619947B418E745CA00991D0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B318E745CA00991D0E /* Foundation.framework */; };
 		619947B618E745CA00991D0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B518E745CA00991D0E /* CoreGraphics.framework */; };
 		619947B818E745CA00991D0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B718E745CA00991D0E /* UIKit.framework */; };
@@ -55,6 +56,8 @@
 		613DA8C818E88A1E0055C4E0 /* RZLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZLabel.m; sourceTree = "<group>"; };
 		613DA8C918E88A1E0055C4E0 /* RZView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZView.h; sourceTree = "<group>"; };
 		613DA8CA18E88A1E0055C4E0 /* RZView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZView.m; sourceTree = "<group>"; };
+		61911A0518FBDD3E00A48923 /* RZImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZImageView.h; sourceTree = "<group>"; };
+		61911A0618FBDD3E00A48923 /* RZImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZImageView.m; sourceTree = "<group>"; };
 		619947B018E745CA00991D0E /* JS-Exports-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JS-Exports-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		619947B318E745CA00991D0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		619947B518E745CA00991D0E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -142,6 +145,8 @@
 				613DA8C818E88A1E0055C4E0 /* RZLabel.m */,
 				613DA8C918E88A1E0055C4E0 /* RZView.h */,
 				613DA8CA18E88A1E0055C4E0 /* RZView.m */,
+				61911A0518FBDD3E00A48923 /* RZImageView.h */,
+				61911A0618FBDD3E00A48923 /* RZImageView.m */,
 			);
 			path = RZUI;
 			sourceTree = "<group>";
@@ -274,6 +279,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Razorthink;
 				TargetAttributes = {
+					619947AF18E745CA00991D0E = {
+						DevelopmentTeam = W49JG3BDE3;
+					};
 					619947CA18E745CA00991D0E = {
 						TestTargetID = 619947AF18E745CA00991D0E;
 					};
@@ -365,6 +373,7 @@
 				619947C418E745CA00991D0E /* AppDelegate.m in Sources */,
 				613DA8D318E88A1E0055C4E0 /* RZView.m in Sources */,
 				619947C018E745CA00991D0E /* main.m in Sources */,
+				61911A0718FBDD3E00A48923 /* RZImageView.m in Sources */,
 				613DA8D118E88A1E0055C4E0 /* RZButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,10 +492,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JS-Exports-test/JS-Exports-test-Prefix.pch";
 				INFOPLIST_FILE = "JS-Exports-test/JS-Exports-test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -497,10 +509,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JS-Exports-test/JS-Exports-test-Prefix.pch";
 				INFOPLIST_FILE = "JS-Exports-test/JS-Exports-test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

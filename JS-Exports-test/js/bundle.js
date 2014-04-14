@@ -42,9 +42,8 @@ try {
     var circles = $('class', 'dots', App);
     _.each(circles, function (dot) {
         dot.on('tap', function () {
-            console.log(App.MainView.get('background'));
+            dot.set({background: App.MainView.get('background')});
             dot.background = App.MainView.get('background');
-            console.log(dot.get('background'));
         });
     });
 
@@ -67,7 +66,7 @@ var randomNumber = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-require('./circles')();
+var c = require('./circles');
 
 module.exports = function () {
     

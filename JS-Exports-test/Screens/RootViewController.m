@@ -46,7 +46,7 @@
     NSError *error = nil;
     NSString *scriptPath = [[NSBundle mainBundle] pathForResource:@"bundle" ofType:@"js"];
     NSString *script = [NSString stringWithContentsOfFile:scriptPath encoding:NSUTF8StringEncoding error:&error];
-    
+        
     if (!error) { [context evaluateScript:script]; }
     else NSLog(@"error loading JS from file");
     
