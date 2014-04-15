@@ -61,6 +61,10 @@ frame=_frame;
         _nodeClass = [config[@"class"] toString];
     }
     
+    if (![config[@"background"] isUndefined]) {
+        self.backgroundColor = [Utils makeColor:[config[@"background"] toArray]];
+    }
+    
     if (![config[@"enableScroll"] isUndefined]) {
         self.scrollEnabled = [config[@"enableScroll"] toBool];
     }

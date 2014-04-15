@@ -13,17 +13,7 @@
 		61911A1918FD4D4700A48923 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A1718FD4D4700A48923 /* AppDelegate.m */; };
 		61911A2218FD4D6400A48923 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A2018FD4D6400A48923 /* RootViewController.m */; };
 		61911A2418FD4D7000A48923 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61911A2318FD4D7000A48923 /* Images.xcassets */; };
-		61911A3C18FD4E5800A48923 /* bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 61911A3618FD4E5800A48923 /* bundle.js */; };
-		61911A3D18FD4E5800A48923 /* ui.js in Resources */ = {isa = PBXBuildFile; fileRef = 61911A3718FD4E5800A48923 /* ui.js */; };
-		61911A3E18FD4E5800A48923 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 61911A3818FD4E5800A48923 /* main.js */; };
-		61911A3F18FD4E5800A48923 /* circles.js in Resources */ = {isa = PBXBuildFile; fileRef = 61911A3918FD4E5800A48923 /* circles.js */; };
-		61911A4018FD4E5800A48923 /* query.js in Resources */ = {isa = PBXBuildFile; fileRef = 61911A3A18FD4E5800A48923 /* query.js */; };
-		61911A4118FD4E5800A48923 /* underscore.js in Resources */ = {isa = PBXBuildFile; fileRef = 61911A3B18FD4E5800A48923 /* underscore.js */; };
-		61911A4C18FD4EB400A48923 /* RZScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A4218FD4EB400A48923 /* RZScrollView.m */; };
-		61911A4D18FD4EB400A48923 /* RZView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A4318FD4EB400A48923 /* RZView.m */; };
-		61911A4E18FD4EB400A48923 /* RZLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A4418FD4EB400A48923 /* RZLabel.m */; };
 		61911A4F18FD4EB400A48923 /* RZButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A4518FD4EB400A48923 /* RZButton.m */; };
-		61911A5018FD4EB400A48923 /* RZImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A4818FD4EB400A48923 /* RZImageView.m */; };
 		619947B418E745CA00991D0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B318E745CA00991D0E /* Foundation.framework */; };
 		619947B618E745CA00991D0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B518E745CA00991D0E /* CoreGraphics.framework */; };
 		619947B818E745CA00991D0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B718E745CA00991D0E /* UIKit.framework */; };
@@ -36,10 +26,10 @@
 		619947D918E745CA00991D0E /* JS_Exports_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947D818E745CA00991D0E /* JS_Exports_testTests.m */; };
 		619947E318E745D200991D0E /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947E218E745D200991D0E /* JavaScriptCore.framework */; };
 		71EF4DC118FC0A6E0091B269 /* palette.png in Resources */ = {isa = PBXBuildFile; fileRef = 71EF4DC018FC0A6E0091B269 /* palette.png */; };
-		71EF4DC418FC10F50091B269 /* RZScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EF4DC318FC10F50091B269 /* RZScrollView.m */; };
-		71EF4DC818FD464D0091B269 /* circles.js in Resources */ = {isa = PBXBuildFile; fileRef = 71EF4DC518FD464D0091B269 /* circles.js */; };
-		71EF4DC918FD464D0091B269 /* query.js in Resources */ = {isa = PBXBuildFile; fileRef = 71EF4DC618FD464D0091B269 /* query.js */; };
-		71EF4DCA18FD464D0091B269 /* underscore.js in Resources */ = {isa = PBXBuildFile; fileRef = 71EF4DC718FD464D0091B269 /* underscore.js */; };
+		71EF4DC418FC10F50091B269 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		71EF4DC818FD464D0091B269 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		71EF4DC918FD464D0091B269 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		71EF4DCA18FD464D0091B269 /* (null) in Resources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,16 +147,16 @@
 		613DA8C418E88A1E0055C4E0 /* RZUI */ = {
 			isa = PBXGroup;
 			children = (
-				61911A4218FD4EB400A48923 /* RZScrollView.m */,
-				61911A4318FD4EB400A48923 /* RZView.m */,
-				61911A4418FD4EB400A48923 /* RZLabel.m */,
-				61911A4518FD4EB400A48923 /* RZButton.m */,
 				61911A4618FD4EB400A48923 /* RZButton.h */,
+				61911A4518FD4EB400A48923 /* RZButton.m */,
 				61911A4718FD4EB400A48923 /* RZImageView.h */,
 				61911A4818FD4EB400A48923 /* RZImageView.m */,
 				61911A4918FD4EB400A48923 /* RZLabel.h */,
+				61911A4418FD4EB400A48923 /* RZLabel.m */,
 				61911A4A18FD4EB400A48923 /* RZScrollView.h */,
+				61911A4218FD4EB400A48923 /* RZScrollView.m */,
 				61911A4B18FD4EB400A48923 /* RZView.h */,
+				61911A4318FD4EB400A48923 /* RZView.m */,
 			);
 			path = RZUI;
 			sourceTree = "<group>";
@@ -348,9 +338,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71EF4DC818FD464D0091B269 /* circles.js in Resources */,
-				71EF4DC918FD464D0091B269 /* query.js in Resources */,
-				71EF4DCA18FD464D0091B269 /* underscore.js in Resources */,
+				71EF4DC818FD464D0091B269 /* (null) in Resources */,
+				71EF4DC918FD464D0091B269 /* (null) in Resources */,
+				71EF4DCA18FD464D0091B269 /* (null) in Resources */,
 				619947BE18E745CA00991D0E /* InfoPlist.strings in Resources */,
 				61911A2418FD4D7000A48923 /* Images.xcassets in Resources */,
 				71EF4DC118FC0A6E0091B269 /* palette.png in Resources */,
@@ -405,13 +395,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				613DA8D218E88A1E0055C4E0 /* RZLabel.m in Sources */,
-				613DA8CE18E88A1E0055C4E0 /* RootViewController.m in Sources */,
 				613DA8D018E88A1E0055C4E0 /* Utils.m in Sources */,
-				619947F018E7D47200991D0E /* AppContext.m in Sources */,
-				619947C418E745CA00991D0E /* AppDelegate.m in Sources */,
-				71EF4DC418FC10F50091B269 /* RZScrollView.m in Sources */,
-				613DA8D318E88A1E0055C4E0 /* RZView.m in Sources */,
+				71EF4DC418FC10F50091B269 /* (null) in Sources */,
 				619947C018E745CA00991D0E /* main.m in Sources */,
 				61911A2218FD4D6400A48923 /* RootViewController.m in Sources */,
 				61911A1918FD4D4700A48923 /* AppDelegate.m in Sources */,
