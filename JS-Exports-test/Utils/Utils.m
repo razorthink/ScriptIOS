@@ -42,7 +42,6 @@
 {
     const CGFloat *colorComponents = CGColorGetComponents(rgba.CGColor);
     NSArray *colorArray = [NSArray arrayWithObjects:[NSNumber numberWithFloat:colorComponents[0]*255.0f], [NSNumber numberWithFloat:colorComponents[1]*255.0f] , [NSNumber numberWithFloat:colorComponents[2]*255.0f], [NSNumber numberWithFloat:colorComponents[3]], nil];
-    NSLog(@"%@",colorArray);
     return colorArray;
 }
 @end

@@ -59,9 +59,7 @@ cornerRadius=_cornerRadius;
 }
 
 -(void)set:(JSValue *)config
-{
-    NSLog(@"%@", [config toDictionary]);
-    
+{    
     if (![config[@"alpha"] isUndefined]) {
         self.alpha = [config[@"alpha"] toDouble];
     }

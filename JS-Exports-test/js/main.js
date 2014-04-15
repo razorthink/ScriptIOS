@@ -17,7 +17,7 @@ try {
     _.each(circles, function (dot) {
         dot.on('tap', function () {
             console.log("tapped function");
-            dot.set({background: App.button.get('background')});
+            dot.set({background: App.MainView.get('background')});
         });
     });
 

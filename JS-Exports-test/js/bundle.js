@@ -42,7 +42,7 @@ try {
     _.each(circles, function (dot) {
         dot.on('tap', function () {
             console.log("tapped function");
-            dot.set({background: App.button.get('background')});
+            dot.set({background: App.MainView.get('background')});
         });
     });
 
@@ -80,7 +80,7 @@ module.exports = function () {
     });
 
     var buttonStyle = {
-        background: [255, 25, 255, 1],
+        background: [255, 255, 255, 1],
         cornerRadius: 4,
         titleColor: [231, 76, 60, 1],
         font: "avenir",

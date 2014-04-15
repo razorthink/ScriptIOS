@@ -17,7 +17,7 @@ module.exports = function () {
     });
 
     var buttonStyle = {
-        background: [255, 25, 255, 1],
+        background: [255, 255, 255, 1],
         cornerRadius: 4,
         titleColor: [231, 76, 60, 1],
         font: "avenir",
