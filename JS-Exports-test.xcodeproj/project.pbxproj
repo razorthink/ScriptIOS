@@ -15,6 +15,8 @@
 		613DA8D218E88A1E0055C4E0 /* RZLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8C818E88A1E0055C4E0 /* RZLabel.m */; };
 		613DA8D318E88A1E0055C4E0 /* RZView.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8CA18E88A1E0055C4E0 /* RZView.m */; };
 		61911A0718FBDD3E00A48923 /* RZImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A0618FBDD3E00A48923 /* RZImageView.m */; };
+		61911A1218FD3ED800A48923 /* circles.js in Resources */ = {isa = PBXBuildFile; fileRef = 61911A1018FD3ED800A48923 /* circles.js */; };
+		61911A1318FD3ED800A48923 /* query.js in Resources */ = {isa = PBXBuildFile; fileRef = 61911A1118FD3ED800A48923 /* query.js */; };
 		619947B418E745CA00991D0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B318E745CA00991D0E /* Foundation.framework */; };
 		619947B618E745CA00991D0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B518E745CA00991D0E /* CoreGraphics.framework */; };
 		619947B818E745CA00991D0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B718E745CA00991D0E /* UIKit.framework */; };
@@ -60,6 +62,8 @@
 		613DA8CA18E88A1E0055C4E0 /* RZView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZView.m; sourceTree = "<group>"; };
 		61911A0518FBDD3E00A48923 /* RZImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZImageView.h; sourceTree = "<group>"; };
 		61911A0618FBDD3E00A48923 /* RZImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZImageView.m; sourceTree = "<group>"; };
+		61911A1018FD3ED800A48923 /* circles.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = circles.js; sourceTree = "<group>"; };
+		61911A1118FD3ED800A48923 /* query.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = query.js; sourceTree = "<group>"; };
 		619947B018E745CA00991D0E /* JS-Exports-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JS-Exports-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		619947B318E745CA00991D0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		619947B518E745CA00991D0E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,6 +123,8 @@
 				61BE311718E946EE00A0BF9C /* bundle.js */,
 				613DA8BC18E88A1E0055C4E0 /* ui.js */,
 				61BE311918E947E200A0BF9C /* main.js */,
+				61911A1018FD3ED800A48923 /* circles.js */,
+				61911A1118FD3ED800A48923 /* query.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
@@ -337,6 +343,8 @@
 			files = (
 				619947BE18E745CA00991D0E /* InfoPlist.strings in Resources */,
 				71EF4DC118FC0A6E0091B269 /* palette.png in Resources */,
+				61911A1318FD3ED800A48923 /* query.js in Resources */,
+				61911A1218FD3ED800A48923 /* circles.js in Resources */,
 				619947C618E745CA00991D0E /* Images.xcassets in Resources */,
 				61BE311818E946EE00A0BF9C /* bundle.js in Resources */,
 				61BE311A18E947E200A0BF9C /* main.js in Resources */,

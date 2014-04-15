@@ -23,7 +23,6 @@ module.exports = function () {
 };
 
 },{}],2:[function(require,module,exports){
-
 try {
 
     var _ = require('./underscore'),
@@ -42,8 +41,8 @@ try {
     var circles = $('class', 'dots', App);
     _.each(circles, function (dot) {
         dot.on('tap', function () {
-            dot.set({background: App.MainView.get('background')});
-            dot.background = App.MainView.get('background');
+            console.log("tapped function");
+            dot.set({background: App.button.get('background')});
         });
     });
 
@@ -81,7 +80,7 @@ module.exports = function () {
     });
 
     var buttonStyle = {
-        background: [255, 255, 255, 1],
+        background: [255, 25, 255, 1],
         cornerRadius: 4,
         titleColor: [0, 0, 0, 0.75],
         font: "avenir", fontSize: 18, class: "actionBtn"
@@ -96,7 +95,7 @@ module.exports = function () {
     });
 
     App.button.on("tap", function () {
-        App.MainView.background = [randomNumber(0, 255),randomNumber(0, 255),randomNumber(0, 255),1];
+        App.MainView.set({background: [randomNumber(0, 255),randomNumber(0, 255),randomNumber(0, 255),1]});
     });
 
     App.label = UI.Label.create();

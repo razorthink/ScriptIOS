@@ -85,7 +85,7 @@
     }
     
     if (![config[@"titleColor"] isUndefined]) {
-        [self setTitleColor:[config[@"titleColor"] toObjectOfClass:[UIColor class]] forState:UIControlStateNormal];
+        [self setTitleColor:[Utils makeColor:[config[@"titleColor"] toArray]] forState:UIControlStateNormal];
     }
     
     if (![config[@"font"] isUndefined]) {

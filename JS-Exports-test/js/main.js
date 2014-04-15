@@ -1,4 +1,3 @@
-
 try {
 
     var _ = require('./underscore'),
@@ -17,8 +16,8 @@ try {
     var circles = $('class', 'dots', App);
     _.each(circles, function (dot) {
         dot.on('tap', function () {
-            dot.set({background: App.MainView.get('background')});
-            dot.background = App.MainView.get('background');
+            console.log("tapped function");
+            dot.set({background: App.button.get('background')});
         });
     });
 
