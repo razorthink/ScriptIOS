@@ -83,7 +83,7 @@ module.exports = function () {
     var buttonStyle = {
         background: [255, 255, 255, 1],
         cornerRadius: 4,
-        titleColor: [231, 76, 60, 1],
+        titleColor: [0, 0, 0, 0.75],
         font: "avenir",
         fontSize: 18,
         class: "actionBtn"
