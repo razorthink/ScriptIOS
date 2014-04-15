@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2A0E6BB3-56C9-4902-8E8C-8A0B710E26FF</string>
+	<string>86E06AE5-9C4A-4AE0-8515-4994CA16E751</string>
 	<key>IDESourceControlProjectName</key>
 	<string>JS-Exports-test</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>C44C7DCB-CCB0-4283-820C-CF223030E21F</key>
+		<key>9EF310E5-B153-4F1F-98CF-42E1B364B3FC</key>
 		<string>https://github.com/razorthink/ScriptIOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>JS-Exports-test.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C44C7DCB-CCB0-4283-820C-CF223030E21F</key>
+		<key>9EF310E5-B153-4F1F-98CF-42E1B364B3FC</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>C44C7DCB-CCB0-4283-820C-CF223030E21F</string>
+	<string>9EF310E5-B153-4F1F-98CF-42E1B364B3FC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C44C7DCB-CCB0-4283-820C-CF223030E21F</string>
+			<string>9EF310E5-B153-4F1F-98CF-42E1B364B3FC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ScriptIOS</string>
 		</dict>

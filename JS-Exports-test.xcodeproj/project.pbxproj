@@ -8,31 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		2273C789462F43D8B775E5E9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 102A749FC6A044BBB55DCB39 /* libPods.a */; };
-		613DA8CD18E88A1E0055C4E0 /* ui.js in Resources */ = {isa = PBXBuildFile; fileRef = 613DA8BC18E88A1E0055C4E0 /* ui.js */; };
-		613DA8CE18E88A1E0055C4E0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8BF18E88A1E0055C4E0 /* RootViewController.m */; };
 		613DA8D018E88A1E0055C4E0 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8C318E88A1E0055C4E0 /* Utils.m */; };
-		613DA8D118E88A1E0055C4E0 /* RZButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8C618E88A1E0055C4E0 /* RZButton.m */; };
-		613DA8D218E88A1E0055C4E0 /* RZLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8C818E88A1E0055C4E0 /* RZLabel.m */; };
-		613DA8D318E88A1E0055C4E0 /* RZView.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8CA18E88A1E0055C4E0 /* RZView.m */; };
-		61911A0718FBDD3E00A48923 /* RZImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A0618FBDD3E00A48923 /* RZImageView.m */; };
+		61911A1818FD4D4700A48923 /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A1518FD4D4700A48923 /* AppContext.m */; };
+		61911A1918FD4D4700A48923 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A1718FD4D4700A48923 /* AppDelegate.m */; };
+		61911A1D18FD4D5600A48923 /* bundle.js in Sources */ = {isa = PBXBuildFile; fileRef = 61911A1A18FD4D5600A48923 /* bundle.js */; };
+		61911A1E18FD4D5600A48923 /* main.js in Sources */ = {isa = PBXBuildFile; fileRef = 61911A1B18FD4D5600A48923 /* main.js */; };
+		61911A1F18FD4D5600A48923 /* ui.js in Sources */ = {isa = PBXBuildFile; fileRef = 61911A1C18FD4D5600A48923 /* ui.js */; };
+		61911A2218FD4D6400A48923 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A2018FD4D6400A48923 /* RootViewController.m */; };
+		61911A2418FD4D7000A48923 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61911A2318FD4D7000A48923 /* Images.xcassets */; };
+		61911A2F18FD4D7800A48923 /* RZView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A2518FD4D7800A48923 /* RZView.m */; };
+		61911A3018FD4D7800A48923 /* RZLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A2618FD4D7800A48923 /* RZLabel.m */; };
+		61911A3118FD4D7800A48923 /* RZButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A2718FD4D7800A48923 /* RZButton.m */; };
+		61911A3218FD4D7800A48923 /* RZImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A2A18FD4D7800A48923 /* RZImageView.m */; };
+		61911A3318FD4D7800A48923 /* RZScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A2D18FD4D7800A48923 /* RZScrollView.m */; };
 		619947B418E745CA00991D0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B318E745CA00991D0E /* Foundation.framework */; };
 		619947B618E745CA00991D0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B518E745CA00991D0E /* CoreGraphics.framework */; };
 		619947B818E745CA00991D0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B718E745CA00991D0E /* UIKit.framework */; };
 		619947BE18E745CA00991D0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 619947BC18E745CA00991D0E /* InfoPlist.strings */; };
 		619947C018E745CA00991D0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947BF18E745CA00991D0E /* main.m */; };
-		619947C418E745CA00991D0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947C318E745CA00991D0E /* AppDelegate.m */; };
-		619947C618E745CA00991D0E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 619947C518E745CA00991D0E /* Images.xcassets */; };
 		619947CD18E745CA00991D0E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947CC18E745CA00991D0E /* XCTest.framework */; };
 		619947CE18E745CA00991D0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B318E745CA00991D0E /* Foundation.framework */; };
 		619947CF18E745CA00991D0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947B718E745CA00991D0E /* UIKit.framework */; };
 		619947D718E745CA00991D0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 619947D518E745CA00991D0E /* InfoPlist.strings */; };
 		619947D918E745CA00991D0E /* JS_Exports_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947D818E745CA00991D0E /* JS_Exports_testTests.m */; };
 		619947E318E745D200991D0E /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619947E218E745D200991D0E /* JavaScriptCore.framework */; };
-		619947F018E7D47200991D0E /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 619947EF18E7D47200991D0E /* AppContext.m */; };
-		61BE311818E946EE00A0BF9C /* bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 61BE311718E946EE00A0BF9C /* bundle.js */; };
-		61BE311A18E947E200A0BF9C /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 61BE311918E947E200A0BF9C /* main.js */; };
 		71EF4DC118FC0A6E0091B269 /* palette.png in Resources */ = {isa = PBXBuildFile; fileRef = 71EF4DC018FC0A6E0091B269 /* palette.png */; };
-		71EF4DC418FC10F50091B269 /* RZScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EF4DC318FC10F50091B269 /* RZScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,19 +47,28 @@
 
 /* Begin PBXFileReference section */
 		102A749FC6A044BBB55DCB39 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		613DA8BC18E88A1E0055C4E0 /* ui.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ui.js; sourceTree = "<group>"; };
-		613DA8BE18E88A1E0055C4E0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		613DA8BF18E88A1E0055C4E0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		613DA8C218E88A1E0055C4E0 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		613DA8C318E88A1E0055C4E0 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
-		613DA8C518E88A1E0055C4E0 /* RZButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZButton.h; sourceTree = "<group>"; };
-		613DA8C618E88A1E0055C4E0 /* RZButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZButton.m; sourceTree = "<group>"; };
-		613DA8C718E88A1E0055C4E0 /* RZLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZLabel.h; sourceTree = "<group>"; };
-		613DA8C818E88A1E0055C4E0 /* RZLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZLabel.m; sourceTree = "<group>"; };
-		613DA8C918E88A1E0055C4E0 /* RZView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZView.h; sourceTree = "<group>"; };
-		613DA8CA18E88A1E0055C4E0 /* RZView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZView.m; sourceTree = "<group>"; };
-		61911A0518FBDD3E00A48923 /* RZImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZImageView.h; sourceTree = "<group>"; };
-		61911A0618FBDD3E00A48923 /* RZImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZImageView.m; sourceTree = "<group>"; };
+		61911A1418FD4D4700A48923 /* AppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppContext.h; sourceTree = "<group>"; };
+		61911A1518FD4D4700A48923 /* AppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppContext.m; sourceTree = "<group>"; };
+		61911A1618FD4D4700A48923 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		61911A1718FD4D4700A48923 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		61911A1A18FD4D5600A48923 /* bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle.js; sourceTree = "<group>"; };
+		61911A1B18FD4D5600A48923 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
+		61911A1C18FD4D5600A48923 /* ui.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ui.js; sourceTree = "<group>"; };
+		61911A2018FD4D6400A48923 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		61911A2118FD4D6400A48923 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		61911A2318FD4D7000A48923 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		61911A2518FD4D7800A48923 /* RZView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZView.m; sourceTree = "<group>"; };
+		61911A2618FD4D7800A48923 /* RZLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZLabel.m; sourceTree = "<group>"; };
+		61911A2718FD4D7800A48923 /* RZButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZButton.m; sourceTree = "<group>"; };
+		61911A2818FD4D7800A48923 /* RZButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZButton.h; sourceTree = "<group>"; };
+		61911A2918FD4D7800A48923 /* RZImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZImageView.h; sourceTree = "<group>"; };
+		61911A2A18FD4D7800A48923 /* RZImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZImageView.m; sourceTree = "<group>"; };
+		61911A2B18FD4D7800A48923 /* RZLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZLabel.h; sourceTree = "<group>"; };
+		61911A2C18FD4D7800A48923 /* RZScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZScrollView.h; sourceTree = "<group>"; };
+		61911A2D18FD4D7800A48923 /* RZScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZScrollView.m; sourceTree = "<group>"; };
+		61911A2E18FD4D7800A48923 /* RZView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZView.h; sourceTree = "<group>"; };
 		619947B018E745CA00991D0E /* JS-Exports-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JS-Exports-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		619947B318E745CA00991D0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		619947B518E745CA00991D0E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,22 +77,13 @@
 		619947BD18E745CA00991D0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		619947BF18E745CA00991D0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		619947C118E745CA00991D0E /* JS-Exports-test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JS-Exports-test-Prefix.pch"; sourceTree = "<group>"; };
-		619947C218E745CA00991D0E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		619947C318E745CA00991D0E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		619947C518E745CA00991D0E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		619947CB18E745CA00991D0E /* JS-Exports-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JS-Exports-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		619947CC18E745CA00991D0E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		619947D418E745CA00991D0E /* JS-Exports-testTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JS-Exports-testTests-Info.plist"; sourceTree = "<group>"; };
 		619947D618E745CA00991D0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		619947D818E745CA00991D0E /* JS_Exports_testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JS_Exports_testTests.m; sourceTree = "<group>"; };
 		619947E218E745D200991D0E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		619947EE18E7D47200991D0E /* AppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppContext.h; sourceTree = "<group>"; };
-		619947EF18E7D47200991D0E /* AppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppContext.m; sourceTree = "<group>"; };
-		61BE311718E946EE00A0BF9C /* bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle.js; sourceTree = "<group>"; };
-		61BE311918E947E200A0BF9C /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		71EF4DC018FC0A6E0091B269 /* palette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = palette.png; sourceTree = "<group>"; };
-		71EF4DC218FC10F50091B269 /* RZScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZScrollView.h; sourceTree = "<group>"; };
-		71EF4DC318FC10F50091B269 /* RZScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZScrollView.m; sourceTree = "<group>"; };
 		C2DA551F8BA748F6BC1446DE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,9 +116,9 @@
 		613DA8B918E88A1E0055C4E0 /* js */ = {
 			isa = PBXGroup;
 			children = (
-				61BE311718E946EE00A0BF9C /* bundle.js */,
-				613DA8BC18E88A1E0055C4E0 /* ui.js */,
-				61BE311918E947E200A0BF9C /* main.js */,
+				61911A1A18FD4D5600A48923 /* bundle.js */,
+				61911A1B18FD4D5600A48923 /* main.js */,
+				61911A1C18FD4D5600A48923 /* ui.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
@@ -126,8 +126,8 @@
 		613DA8BD18E88A1E0055C4E0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				613DA8BE18E88A1E0055C4E0 /* RootViewController.h */,
-				613DA8BF18E88A1E0055C4E0 /* RootViewController.m */,
+				61911A2018FD4D6400A48923 /* RootViewController.m */,
+				61911A2118FD4D6400A48923 /* RootViewController.h */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -144,16 +144,16 @@
 		613DA8C418E88A1E0055C4E0 /* RZUI */ = {
 			isa = PBXGroup;
 			children = (
-				613DA8C518E88A1E0055C4E0 /* RZButton.h */,
-				613DA8C618E88A1E0055C4E0 /* RZButton.m */,
-				613DA8C718E88A1E0055C4E0 /* RZLabel.h */,
-				613DA8C818E88A1E0055C4E0 /* RZLabel.m */,
-				613DA8C918E88A1E0055C4E0 /* RZView.h */,
-				613DA8CA18E88A1E0055C4E0 /* RZView.m */,
-				61911A0518FBDD3E00A48923 /* RZImageView.h */,
-				61911A0618FBDD3E00A48923 /* RZImageView.m */,
-				71EF4DC218FC10F50091B269 /* RZScrollView.h */,
-				71EF4DC318FC10F50091B269 /* RZScrollView.m */,
+				61911A2518FD4D7800A48923 /* RZView.m */,
+				61911A2618FD4D7800A48923 /* RZLabel.m */,
+				61911A2718FD4D7800A48923 /* RZButton.m */,
+				61911A2818FD4D7800A48923 /* RZButton.h */,
+				61911A2918FD4D7800A48923 /* RZImageView.h */,
+				61911A2A18FD4D7800A48923 /* RZImageView.m */,
+				61911A2B18FD4D7800A48923 /* RZLabel.h */,
+				61911A2C18FD4D7800A48923 /* RZScrollView.h */,
+				61911A2D18FD4D7800A48923 /* RZScrollView.m */,
+				61911A2E18FD4D7800A48923 /* RZView.h */,
 			);
 			path = RZUI;
 			sourceTree = "<group>";
@@ -195,15 +195,15 @@
 		619947B918E745CA00991D0E /* JS-Exports-test */ = {
 			isa = PBXGroup;
 			children = (
-				619947C218E745CA00991D0E /* AppDelegate.h */,
-				619947C318E745CA00991D0E /* AppDelegate.m */,
-				619947EE18E7D47200991D0E /* AppContext.h */,
-				619947EF18E7D47200991D0E /* AppContext.m */,
+				61911A1418FD4D4700A48923 /* AppContext.h */,
+				61911A1518FD4D4700A48923 /* AppContext.m */,
+				61911A1618FD4D4700A48923 /* AppDelegate.h */,
+				61911A1718FD4D4700A48923 /* AppDelegate.m */,
 				613DA8B918E88A1E0055C4E0 /* js */,
 				613DA8BD18E88A1E0055C4E0 /* Screens */,
 				613DA8C118E88A1E0055C4E0 /* Utils */,
 				613DA8C418E88A1E0055C4E0 /* RZUI */,
-				619947C518E745CA00991D0E /* Images.xcassets */,
+				61911A2318FD4D7000A48923 /* Images.xcassets */,
 				619947BA18E745CA00991D0E /* Supporting Files */,
 			);
 			path = "JS-Exports-test";
@@ -336,11 +336,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				619947BE18E745CA00991D0E /* InfoPlist.strings in Resources */,
+				61911A2418FD4D7000A48923 /* Images.xcassets in Resources */,
 				71EF4DC118FC0A6E0091B269 /* palette.png in Resources */,
-				619947C618E745CA00991D0E /* Images.xcassets in Resources */,
-				61BE311818E946EE00A0BF9C /* bundle.js in Resources */,
-				61BE311A18E947E200A0BF9C /* main.js in Resources */,
-				613DA8CD18E88A1E0055C4E0 /* ui.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,16 +389,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				613DA8D218E88A1E0055C4E0 /* RZLabel.m in Sources */,
-				613DA8CE18E88A1E0055C4E0 /* RootViewController.m in Sources */,
+				61911A3318FD4D7800A48923 /* RZScrollView.m in Sources */,
 				613DA8D018E88A1E0055C4E0 /* Utils.m in Sources */,
-				619947F018E7D47200991D0E /* AppContext.m in Sources */,
-				619947C418E745CA00991D0E /* AppDelegate.m in Sources */,
-				71EF4DC418FC10F50091B269 /* RZScrollView.m in Sources */,
-				613DA8D318E88A1E0055C4E0 /* RZView.m in Sources */,
+				61911A1E18FD4D5600A48923 /* main.js in Sources */,
+				61911A3218FD4D7800A48923 /* RZImageView.m in Sources */,
+				61911A3018FD4D7800A48923 /* RZLabel.m in Sources */,
 				619947C018E745CA00991D0E /* main.m in Sources */,
-				61911A0718FBDD3E00A48923 /* RZImageView.m in Sources */,
-				613DA8D118E88A1E0055C4E0 /* RZButton.m in Sources */,
+				61911A1F18FD4D5600A48923 /* ui.js in Sources */,
+				61911A2218FD4D6400A48923 /* RootViewController.m in Sources */,
+				61911A2F18FD4D7800A48923 /* RZView.m in Sources */,
+				61911A1918FD4D4700A48923 /* AppDelegate.m in Sources */,
+				61911A1D18FD4D5600A48923 /* bundle.js in Sources */,
+				61911A1818FD4D4700A48923 /* AppContext.m in Sources */,
+				61911A3118FD4D7800A48923 /* RZButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
