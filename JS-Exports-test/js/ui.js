@@ -12,7 +12,6 @@ module.exports = function () {
     App.MainView.append(App.subView);
     App.subView.set({
         frame: [0, 500, 320, 68],
-        test: 12,
         background:[0, 0, 0, 0.75]
     });
 
@@ -22,8 +21,8 @@ module.exports = function () {
     App.MainView.append(App.scrollText);
     App.scrollText.set({
         frame: [20, 130, 300, 320],
-        enableScroll: "YES",
-                       contentSize: [300, 650]
+        contentSize: [300, 650],
+        contentOffset: [0, 0]
     });
     
 
