@@ -78,39 +78,35 @@ module.exports = function () {
         background:[0, 0, 0, 0.75]
     });
 
-    var buttonStyle = {
-        background: [255, 255, 255, 1],
-        cornerRadius: 4,
-        titleColor: [0, 0, 0, 0.75],
-        font: "avenir",
-        fontSize: 18,
-        class: "actionBtn"
-    };
-
-    App.button = UI.Button.create();
-    App.subView.append(App.button);
-    App.button.set(buttonStyle);
-    App.button.set({
-        frame: [30, 20, 260, 30],
-        title: "Shuffle Color",
+    
+    
+    App.scrollText = UI.ScrollView.create();
+    App.MainView.append(App.scrollText);
+    App.scrollText.set({
+        frame: [20, 130, 300, 320],
+        enableScroll: "YES",
+                       contentSize: [300, 650]
     });
-
-    App.button.on("tap", function () {
-        App.MainView.set({background: [randomNumber(0, 255),randomNumber(0, 255),randomNumber(0, 255),1]});
-    });
+    
 
     App.label = UI.Label.create();
-    App.MainView.append(App.label);
+    App.scrollText.append(App.label);
     App.label.set({
-        frame: [30, 120, 260, 320],
+        frame: [0, 0, 300, 620],
         textColor: [255, 255, 255, 1],
         text: "\"I've always wondered if these kinda things were possible; "
               + "I finally have a solution now."
               + "\rAnd the best part is that i built this thing myself with Shrisha!\""
               + "\rLorem ipsum dolor sit amet, consectetur adipisicing elit."
               + "Optio, animi iste cumque voluptas quis earum perferendis praesentium"
+              + "ex molestias distinctio quidem doloribus soluta voluptates possimus ipsa."
+              +"\"I've always wondered if these kinda things were possible; \n\n"
+              + "I finally have a solution now."
+              + "\rAnd the best part is that i built this thing myself with Shrisha!\""
+              + "\rLorem ipsum dolor sit amet, consectetur adipisicing elit."
+              + "Optio, animi iste cumque voluptas quis earum perferendis praesentium"
               + "ex molestias distinctio quidem doloribus soluta voluptates possimus ipsa.",
-        font: "avenir", textAlign: "right", lines: 0
+        font: "avenir", textAlign: "left", lines: 0
     });
 
     App.title = UI.Label.create();
@@ -130,6 +126,26 @@ module.exports = function () {
         image: "palette.png"
     });
     
+    var buttonStyle = {
+    background: [255, 255, 255, 1],
+    cornerRadius: 4,
+    titleColor: [0, 0, 0, 0.75],
+    font: "avenir",
+    fontSize: 18,
+        class: "actionBtn"
+    };
+    
+    App.button = UI.Button.create();
+    App.subView.append(App.button);
+    App.button.set(buttonStyle);
+    App.button.set({
+                   frame: [30, 20, 260, 30],
+                   title: "Shuffle Color",
+                   });
+    
+    App.button.on("tap", function () {
+                  App.MainView.set({background: [randomNumber(0, 255),randomNumber(0, 255),randomNumber(0, 255),1]});
+                  });
 
 };
 
