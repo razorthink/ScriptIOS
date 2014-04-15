@@ -11,9 +11,9 @@
 		613DA8D018E88A1E0055C4E0 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 613DA8C318E88A1E0055C4E0 /* Utils.m */; };
 		61911A1818FD4D4700A48923 /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A1518FD4D4700A48923 /* AppContext.m */; };
 		61911A1918FD4D4700A48923 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A1718FD4D4700A48923 /* AppDelegate.m */; };
-		61911A1D18FD4D5600A48923 /* bundle.js in Sources */ = {isa = PBXBuildFile; fileRef = 61911A1A18FD4D5600A48923 /* bundle.js */; };
-		61911A1E18FD4D5600A48923 /* main.js in Sources */ = {isa = PBXBuildFile; fileRef = 61911A1B18FD4D5600A48923 /* main.js */; };
-		61911A1F18FD4D5600A48923 /* ui.js in Sources */ = {isa = PBXBuildFile; fileRef = 61911A1C18FD4D5600A48923 /* ui.js */; };
+		61911A1D18FD4D5600A48923 /* bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 61911A1A18FD4D5600A48923 /* bundle.js */; };
+		61911A1E18FD4D5600A48923 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 61911A1B18FD4D5600A48923 /* main.js */; };
+		61911A1F18FD4D5600A48923 /* ui.js in Resources */ = {isa = PBXBuildFile; fileRef = 61911A1C18FD4D5600A48923 /* ui.js */; };
 		61911A2218FD4D6400A48923 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A2018FD4D6400A48923 /* RootViewController.m */; };
 		61911A2418FD4D7000A48923 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61911A2318FD4D7000A48923 /* Images.xcassets */; };
 		61911A2F18FD4D7800A48923 /* RZView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61911A2518FD4D7800A48923 /* RZView.m */; };
@@ -335,6 +335,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61911A1E18FD4D5600A48923 /* main.js in Resources */,
+				61911A1F18FD4D5600A48923 /* ui.js in Resources */,
+				61911A1D18FD4D5600A48923 /* bundle.js in Resources */,
 				619947BE18E745CA00991D0E /* InfoPlist.strings in Resources */,
 				61911A2418FD4D7000A48923 /* Images.xcassets in Resources */,
 				71EF4DC118FC0A6E0091B269 /* palette.png in Resources */,
@@ -391,15 +394,12 @@
 			files = (
 				61911A3318FD4D7800A48923 /* RZScrollView.m in Sources */,
 				613DA8D018E88A1E0055C4E0 /* Utils.m in Sources */,
-				61911A1E18FD4D5600A48923 /* main.js in Sources */,
 				61911A3218FD4D7800A48923 /* RZImageView.m in Sources */,
 				61911A3018FD4D7800A48923 /* RZLabel.m in Sources */,
 				619947C018E745CA00991D0E /* main.m in Sources */,
-				61911A1F18FD4D5600A48923 /* ui.js in Sources */,
 				61911A2218FD4D6400A48923 /* RootViewController.m in Sources */,
 				61911A2F18FD4D7800A48923 /* RZView.m in Sources */,
 				61911A1918FD4D4700A48923 /* AppDelegate.m in Sources */,
-				61911A1D18FD4D5600A48923 /* bundle.js in Sources */,
 				61911A1818FD4D4700A48923 /* AppContext.m in Sources */,
 				61911A3118FD4D7800A48923 /* RZButton.m in Sources */,
 			);
