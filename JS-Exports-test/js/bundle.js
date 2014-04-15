@@ -83,8 +83,10 @@ module.exports = function () {
     var buttonStyle = {
         background: [255, 255, 255, 1],
         cornerRadius: 4,
-        titleColor: [0, 0, 0, 0.75],
-        font: "avenir", fontSize: 18, class: "actionBtn"
+        titleColor: [231, 76, 60, 1],
+        font: "avenir",
+        fontSize: 18,
+        class: "actionBtn"
     };
 
     App.button = UI.Button.create();
@@ -104,7 +106,7 @@ module.exports = function () {
     App.label.set({
         frame: [30, 120, 260, 320],
         textColor: [255, 255, 255, 1],
-        text: "\"I've always wondered if these kinda things were possible;"
+        text: "\"I've always wondered if these kinda things were possible; "
               + "I finally have a solution now."
               + "\rAnd the best part is that i built this thing myself with Shrisha!\""
               + "\rLorem ipsum dolor sit amet, consectetur adipisicing elit."
