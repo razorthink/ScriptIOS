@@ -49,10 +49,21 @@ frame=_frame;
         self.frame = [Utils makeFrame:[config[@"frame"] toArray]];
     }
     
+    if (![config[@"contentSize"] isUndefined]) {
+        self.contentSize = [Utils makeSize:[config[@"contentSize"] toArray]];
+    }
+    
+    if (![config[@"contentOffset"] isUndefined]) {
+        self.contentOffset = [Utils makePoint:[config[@"contentOffset"] toArray]];
+    }
+    
     if (![config[@"class"] isUndefined]) {
         _nodeClass = [config[@"class"] toString];
     }
     
+    if (![config[@"enableScroll"] isUndefined]) {
+        self.scrollEnabled = [config[@"enableScroll"] toBool];
+    }
 }
 
 - (JSValue *)get:(NSString *)attr

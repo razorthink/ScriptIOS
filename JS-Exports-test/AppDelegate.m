@@ -13,6 +13,7 @@
 #import "RZUI/RZLabel.h"
 #import "RZUI/RZView.h"
 #import "RZUI/RZImageView.h"
+#import "RZUI/RZScrollView.h"
 #import "Utils.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
@@ -56,7 +57,8 @@
                        @"View": [RZView class],
                        @"Button": [RZButton class],
                        @"Label": [RZLabel class],
-                       @"ImageView": [RZImageView class]
+                       @"ImageView": [RZImageView class],
+                       @"ScrollView": [RZScrollView class]
                        };
     
 }
