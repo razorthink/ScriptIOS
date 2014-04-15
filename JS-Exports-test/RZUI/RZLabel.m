@@ -110,7 +110,7 @@ cornerRadius=_cornerRadius;
     }
     
     else if ([attr isEqualToString:@"background"]) {
-        return [JSValue valueWithObject:self.backgroundColor inContext:[JSContext currentContext]];
+        return [JSValue valueWithObject:[Utils getColor:self.backgroundColor]inContext:[JSContext currentContext]];
     }
     
     else if ([attr isEqualToString:@"frame"]) {
@@ -122,7 +122,7 @@ cornerRadius=_cornerRadius;
     }
     
     else if ([attr isEqualToString:@"textColor"]) {
-        return [JSValue valueWithObject:[self textColor] inContext:[JSContext currentContext]];
+        return [JSValue valueWithObject:[Utils getColor:[self textColor]] inContext:[JSContext currentContext]];
     }
     
     else if ([attr isEqualToString:@"lines"]) {
