@@ -69,11 +69,11 @@
     }
     
     if (![config[@"background"] isUndefined]) {
-        self.backgroundColor = [config[@"background"] toObjectOfClass:[UIColor class]];
+        self.backgroundColor = [Utils makeColor:[config[@"background"] toArray]];
     }
     
     if (![config[@"frame"] isUndefined]) {
-        self.frame = [config[@"frame"] toRect];
+        self.frame = [Utils makeFrame:[config[@"frame"] toArray]];
     }
     
     if (![config[@"cornerRadius"] isUndefined]) {
@@ -106,7 +106,7 @@
     }
     
     else if ([attr isEqualToString:@"background"]) {
-        return [JSValue valueWithObject:self.backgroundColor inContext:[JSContext currentContext]];
+        return [JSValue valueWithObject:[Utils getColor:self.backgroundColor] inContext:[JSContext currentContext]];
     }
     
     else if ([attr isEqualToString:@"frame"]) {

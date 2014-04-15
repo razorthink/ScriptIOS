@@ -11,8 +11,11 @@
 
 @protocol UtilsJSExports <JSExport>
 
-+ (UIColor *)makeColor:(NSArray *)rgba;
-+ (CGRect )makeFrame:(NSArray *)frame;
++(UIColor *)makeColor:(NSArray *)rgba;
++(CGRect )makeFrame:(NSArray *)frame;
++(CGPoint )makePoint:(NSArray *)point;
++(CGSize )makeSize:(NSArray *)size;
++(NSArray *)getColor:(UIColor *)rgba;
 
 @end
 

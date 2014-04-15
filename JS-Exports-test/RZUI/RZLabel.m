@@ -65,11 +65,11 @@ cornerRadius=_cornerRadius;
     }
     
     if (![config[@"background"] isUndefined]) {
-        self.backgroundColor = [config[@"background"] toObjectOfClass:[UIColor class]];
+        self.backgroundColor = [Utils makeColor:[config[@"background"] toArray]];
     }
     
     if (![config[@"frame"] isUndefined]) {
-        self.frame = [config[@"frame"] toRect];
+        self.frame = [Utils makeFrame:[config[@"frame"] toArray]];
     }
     
     if (![config[@"font"] isUndefined]) {

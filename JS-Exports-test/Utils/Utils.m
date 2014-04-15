@@ -26,4 +26,23 @@
                [[frame objectAtIndex:3] floatValue]);
 }
 
++(CGPoint )makePoint:(NSArray *)point
+{
+    return CGPointMake([[point objectAtIndex:0] floatValue],
+                      [[point objectAtIndex:1] floatValue]);
+}
+
++(CGSize )makeSize:(NSArray *)size
+{
+    return CGSizeMake([[size objectAtIndex:0] floatValue],
+                      [[size objectAtIndex:1] floatValue]);
+}
+
++(NSArray *)getColor:(UIColor *)rgba
+{
+    const CGFloat *colorComponents = CGColorGetComponents(rgba.CGColor);
+    NSArray *colorArray = [NSArray arrayWithObjects:[NSNumber numberWithFloat:colorComponents[0]], [NSNumber numberWithFloat:colorComponents[1]] , [NSNumber numberWithFloat:colorComponents[2]], [NSNumber numberWithFloat:colorComponents[3]], nil];
+    NSLog(@"%@",colorArray);
+    return colorArray;
+}
 @end

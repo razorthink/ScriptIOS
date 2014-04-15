@@ -1,28 +1,25 @@
 //
-//  RZImageView.m
+//  RZScrollView.m
 //  JS-Exports-test
 //
-//  Created by Sandeep S Kumar on 14/04/14.
+//  Created by Shrisha on 14/04/14.
 //  Copyright (c) 2014 Razorthink. All rights reserved.
 //
 
-#import "RZImageView.h"
+#import "RZScrollView.h"
 #import "Utils.h"
 
-@interface RZImageView ()
+@interface RZScrollView()
 
 @property NSString *nodeClass;
 
 @end
 
-@implementation RZImageView
+@implementation RZScrollView
 
 @synthesize
 nodeClass=_nodeClass,
-image=_image,
-frame=_frame,
-userInteraction=_userInteraction;
-
+frame=_frame;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -33,9 +30,10 @@ userInteraction=_userInteraction;
     return self;
 }
 
-+ (RZImageView *)create
+
++ (RZScrollView *)create
 {
-    RZImageView *view = [[RZImageView alloc] init];
+    RZScrollView *view = [[RZScrollView alloc] init];
     return view;
 }
 
@@ -46,16 +44,9 @@ userInteraction=_userInteraction;
 
 -(void)set:(JSValue *)config
 {
-    if (![config[@"image"] isUndefined]) {
-        [self setImage:[UIImage imageNamed:[config[@"image"] toString]]];
-    }
     
     if (![config[@"frame"] isUndefined]) {
         self.frame = [Utils makeFrame:[config[@"frame"] toArray]];
-    }
-    
-    if (![config[@"userInteraction"] isUndefined]) {
-        self.userInteractionEnabled = [config[@"userInteraction"] toString];
     }
     
     if (![config[@"class"] isUndefined]) {
@@ -66,17 +57,9 @@ userInteraction=_userInteraction;
 
 - (JSValue *)get:(NSString *)attr
 {
-    
-    if ([attr isEqualToString:@"image"]) {
-        return [JSValue valueWithObject:[self image] inContext:[JSContext currentContext]];
-    }
-    
-    else if ([attr isEqualToString:@"frame"]) {
+
+    if ([attr isEqualToString:@"frame"]) {
         return [JSValue valueWithRect:self.frame inContext:[JSContext currentContext]];
-    }
-    
-    else if ([attr isEqualToString:@"userInteraction"]) {
-        return [JSValue valueWithBool:self.userInteractionEnabled inContext:[JSContext currentContext]];
     }
     
     else if ([attr isEqualToString:@"class"]) {
@@ -89,5 +72,4 @@ userInteraction=_userInteraction;
 - (void)append:(UIView *)child {
     [self addSubview:child];
 }
-
 @end

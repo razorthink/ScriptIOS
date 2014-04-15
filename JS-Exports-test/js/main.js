@@ -16,7 +16,9 @@ try {
 
     var circles = $('class', 'dots', App);
     _.each(circles, function (dot) {
+        console.log("Inside each on click");
         dot.on('tap', function () {
+            console.log("Inside button on click");
             dot.set({background: App.MainView.get('background')});
             dot.background = App.MainView.get('background');
         });
