@@ -13,6 +13,8 @@
 
 @property NSString *nodeClass;
 
+@property UITableView *table;
+
 @end
 
 @implementation RZScrollView

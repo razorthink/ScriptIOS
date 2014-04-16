@@ -21,6 +21,6 @@
 
 @end
 
-@interface RZScrollView : UIScrollView<ScrollViewJSExports>
+@interface RZScrollView : UIScrollView <ScrollViewJSExports>
 
 @end

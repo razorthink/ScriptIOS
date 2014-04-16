@@ -30,6 +30,7 @@
 		71EF4DC818FD464D0091B269 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		71EF4DC918FD464D0091B269 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		71EF4DCA18FD464D0091B269 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		71EF4DCD18FD5DB70091B269 /* RZTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EF4DCC18FD5DB70091B269 /* RZTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		619947D818E745CA00991D0E /* JS_Exports_testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JS_Exports_testTests.m; sourceTree = "<group>"; };
 		619947E218E745D200991D0E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		71EF4DC018FC0A6E0091B269 /* palette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = palette.png; sourceTree = "<group>"; };
+		71EF4DCB18FD5DB70091B269 /* RZTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTableView.h; sourceTree = "<group>"; };
+		71EF4DCC18FD5DB70091B269 /* RZTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZTableView.m; sourceTree = "<group>"; };
 		C2DA551F8BA748F6BC1446DE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +160,8 @@
 				61911A4218FD4EB400A48923 /* RZScrollView.m */,
 				61911A4B18FD4EB400A48923 /* RZView.h */,
 				61911A4318FD4EB400A48923 /* RZView.m */,
+				71EF4DCB18FD5DB70091B269 /* RZTableView.h */,
+				71EF4DCC18FD5DB70091B269 /* RZTableView.m */,
 			);
 			path = RZUI;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 				61911A1918FD4D4700A48923 /* AppDelegate.m in Sources */,
 				61911A4F18FD4EB400A48923 /* RZButton.m in Sources */,
 				61911A1818FD4D4700A48923 /* AppContext.m in Sources */,
+				71EF4DCD18FD5DB70091B269 /* RZTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

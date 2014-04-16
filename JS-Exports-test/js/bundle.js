@@ -76,8 +76,6 @@ module.exports = function () {
         frame: [0, 500, 320, 68],
         background:[0, 0, 0, 0.75]
     });
-
-    
     
     App.scrollText = UI.ScrollView.create();
     App.MainView.append(App.scrollText);
