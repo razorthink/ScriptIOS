@@ -84,7 +84,6 @@ module.exports = function () {
         contentSize: [300, 650],
         contentOffset: [0, 0]
     });
-    
 
     App.label = UI.Label.create();
     App.scrollText.append(App.label);
@@ -105,7 +104,7 @@ module.exports = function () {
               + "ex molestias distinctio quidem doloribus soluta voluptates possimus ipsa.",
         font: "avenir", textAlign: "left", lines: 0
     });
-
+    
     App.title = UI.Label.create();
     App.MainView.append(App.title);
     App.title.set({
@@ -136,13 +135,13 @@ module.exports = function () {
     App.subView.append(App.button);
     App.button.set(buttonStyle);
     App.button.set({
-                   frame: [30, 20, 260, 30],
-                   title: "Shuffle Color",
-                   });
+        frame: [30, 20, 260, 30],
+        title: "Shuffle Color",
+    });
     
     App.button.on("tap", function () {
-                  App.MainView.set({background: [randomNumber(0, 255),randomNumber(0, 255),randomNumber(0, 255),1]});
-                  });
+        App.MainView.set({background: [randomNumber(0, 255),randomNumber(0, 255),randomNumber(0, 255),1]});
+    });
 
 };
 

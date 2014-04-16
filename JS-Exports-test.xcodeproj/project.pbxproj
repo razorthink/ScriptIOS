@@ -32,16 +32,12 @@
 		61E55A2118FE3DDA00246936 /* RZButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E55A0818FE3DDA00246936 /* RZButton.m */; };
 		61E55A2218FE3DDA00246936 /* RZImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E55A0A18FE3DDA00246936 /* RZImageView.m */; };
 		61E55A2318FE3DDA00246936 /* RZLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E55A0C18FE3DDA00246936 /* RZLabel.m */; };
-		61E55A2418FE3DDA00246936 /* RZScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E55A0E18FE3DDA00246936 /* RZScrollView.m */; };
 		61E55A2518FE3DDA00246936 /* RZView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E55A1018FE3DDA00246936 /* RZView.m */; };
 		61E55A2618FE3DDA00246936 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E55A1318FE3DDA00246936 /* RootViewController.m */; };
 		61E55A2718FE3DDA00246936 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E55A1618FE3DDA00246936 /* Utils.m */; };
 		71EF4DC118FC0A6E0091B269 /* palette.png in Resources */ = {isa = PBXBuildFile; fileRef = 71EF4DC018FC0A6E0091B269 /* palette.png */; };
-		71EF4DC418FC10F50091B269 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		71EF4DC818FD464D0091B269 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		71EF4DC918FD464D0091B269 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		71EF4DCA18FD464D0091B269 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		71EF4DCD18FD5DB70091B269 /* RZTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EF4DCC18FD5DB70091B269 /* RZTableView.m */; };
+		71EF4DD018FE81D40091B269 /* RZTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EF4DCF18FE81D40091B269 /* RZTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,8 +93,9 @@
 		61E55A1518FE3DDA00246936 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		61E55A1618FE3DDA00246936 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		71EF4DC018FC0A6E0091B269 /* palette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = palette.png; sourceTree = "<group>"; };
-		71EF4DCB18FD5DB70091B269 /* RZTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTableView.h; sourceTree = "<group>"; };
 		71EF4DCC18FD5DB70091B269 /* RZTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZTableView.m; sourceTree = "<group>"; };
+		71EF4DCE18FE81D40091B269 /* RZTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTableView.h; sourceTree = "<group>"; };
+		71EF4DCF18FE81D40091B269 /* RZTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZTableView.m; sourceTree = "<group>"; };
 		C2DA551F8BA748F6BC1446DE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,56 +125,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		613DA8B918E88A1E0055C4E0 /* js */ = {
-			isa = PBXGroup;
-			children = (
-				61911A3618FD4E5800A48923 /* bundle.js */,
-				61911A3718FD4E5800A48923 /* ui.js */,
-				61911A3818FD4E5800A48923 /* main.js */,
-				61911A3918FD4E5800A48923 /* circles.js */,
-				61911A3A18FD4E5800A48923 /* query.js */,
-				61911A3B18FD4E5800A48923 /* underscore.js */,
-			);
-			path = js;
-			sourceTree = "<group>";
-		};
-		613DA8BD18E88A1E0055C4E0 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				61911A2018FD4D6400A48923 /* RootViewController.m */,
-				61911A2118FD4D6400A48923 /* RootViewController.h */,
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
-		613DA8C118E88A1E0055C4E0 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				613DA8C218E88A1E0055C4E0 /* Utils.h */,
-				613DA8C318E88A1E0055C4E0 /* Utils.m */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		613DA8C418E88A1E0055C4E0 /* RZUI */ = {
-			isa = PBXGroup;
-			children = (
-				61911A4618FD4EB400A48923 /* RZButton.h */,
-				61911A4518FD4EB400A48923 /* RZButton.m */,
-				61911A4718FD4EB400A48923 /* RZImageView.h */,
-				61911A4818FD4EB400A48923 /* RZImageView.m */,
-				61911A4918FD4EB400A48923 /* RZLabel.h */,
-				61911A4418FD4EB400A48923 /* RZLabel.m */,
-				61911A4A18FD4EB400A48923 /* RZScrollView.h */,
-				61911A4218FD4EB400A48923 /* RZScrollView.m */,
-				61911A4B18FD4EB400A48923 /* RZView.h */,
-				61911A4318FD4EB400A48923 /* RZView.m */,
-				71EF4DCB18FD5DB70091B269 /* RZTableView.h */,
-				71EF4DCC18FD5DB70091B269 /* RZTableView.m */,
-			);
-			path = RZUI;
-			sourceTree = "<group>";
-		};
 		619947A718E745CA00991D0E = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +238,8 @@
 		61E55A0118FE3DDA00246936 /* RZUI */ = {
 			isa = PBXGroup;
 			children = (
+				71EF4DCE18FE81D40091B269 /* RZTableView.h */,
+				71EF4DCF18FE81D40091B269 /* RZTableView.m */,
 				61E55A0718FE3DDA00246936 /* RZButton.h */,
 				61E55A0818FE3DDA00246936 /* RZButton.m */,
 				61E55A0918FE3DDA00246936 /* RZImageView.h */,
@@ -487,11 +436,10 @@
 				61E55A1718FE3DDA00246936 /* AppContext.m in Sources */,
 				61E55A2718FE3DDA00246936 /* Utils.m in Sources */,
 				61E55A2118FE3DDA00246936 /* RZButton.m in Sources */,
+				71EF4DD018FE81D40091B269 /* RZTableView.m in Sources */,
 				61E55A2618FE3DDA00246936 /* RootViewController.m in Sources */,
 				619947C018E745CA00991D0E /* main.m in Sources */,
 				61911A1918FD4D4700A48923 /* AppDelegate.m in Sources */,
-				61911A4F18FD4EB400A48923 /* RZButton.m in Sources */,
-				61911A1818FD4D4700A48923 /* AppContext.m in Sources */,
 				71EF4DCD18FD5DB70091B269 /* RZTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
