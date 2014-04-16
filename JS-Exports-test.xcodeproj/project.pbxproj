@@ -36,8 +36,8 @@
 		61E55A2618FE3DDA00246936 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E55A1318FE3DDA00246936 /* RootViewController.m */; };
 		61E55A2718FE3DDA00246936 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E55A1618FE3DDA00246936 /* Utils.m */; };
 		71EF4DC118FC0A6E0091B269 /* palette.png in Resources */ = {isa = PBXBuildFile; fileRef = 71EF4DC018FC0A6E0091B269 /* palette.png */; };
-		71EF4DCD18FD5DB70091B269 /* RZTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EF4DCC18FD5DB70091B269 /* RZTableView.m */; };
 		71EF4DD018FE81D40091B269 /* RZTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EF4DCF18FE81D40091B269 /* RZTableView.m */; };
+		71EF4DD118FE8E4D0091B269 /* RZScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E55A0E18FE3DDA00246936 /* RZScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +93,6 @@
 		61E55A1518FE3DDA00246936 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		61E55A1618FE3DDA00246936 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		71EF4DC018FC0A6E0091B269 /* palette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = palette.png; sourceTree = "<group>"; };
-		71EF4DCC18FD5DB70091B269 /* RZTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZTableView.m; sourceTree = "<group>"; };
 		71EF4DCE18FE81D40091B269 /* RZTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZTableView.h; sourceTree = "<group>"; };
 		71EF4DCF18FE81D40091B269 /* RZTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZTableView.m; sourceTree = "<group>"; };
 		C2DA551F8BA748F6BC1446DE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -430,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71EF4DD118FE8E4D0091B269 /* RZScrollView.m in Sources */,
 				61E55A2218FE3DDA00246936 /* RZImageView.m in Sources */,
 				61E55A2518FE3DDA00246936 /* RZView.m in Sources */,
 				61E55A2318FE3DDA00246936 /* RZLabel.m in Sources */,
@@ -440,7 +440,6 @@
 				61E55A2618FE3DDA00246936 /* RootViewController.m in Sources */,
 				619947C018E745CA00991D0E /* main.m in Sources */,
 				61911A1918FD4D4700A48923 /* AppDelegate.m in Sources */,
-				71EF4DCD18FD5DB70091B269 /* RZTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
