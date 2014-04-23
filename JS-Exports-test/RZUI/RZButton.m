@@ -85,6 +85,10 @@
         self.layer.cornerRadius = [config[@"cornerRadius"] toDouble];
     }
     
+    if (![config[@"image"] isUndefined]) {
+        [self setImage:[UIImage imageNamed:[config[@"image"] toString]] forState:UIControlStateNormal];
+    }
+    
     if (![config[@"title"] isUndefined]) {
         [self setTitle:[config[@"title"] toString] forState:UIControlStateNormal];
     }
