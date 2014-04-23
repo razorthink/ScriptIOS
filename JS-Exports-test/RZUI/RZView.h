@@ -18,6 +18,7 @@
 - (void)set:(JSValue *)config;
 - (void)append:(UIView *)child;
 - (JSValue *)get:(NSString *)attr;
+-(void)removeFromSuperView:(UIView *)view;
 
 + (id)create;
 

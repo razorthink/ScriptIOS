@@ -13,8 +13,6 @@
 
 @property NSString *nodeClass;
 
-@property UITableView *table;
-
 @end
 
 @implementation RZScrollView
@@ -38,6 +36,12 @@ frame=_frame;
     RZScrollView *view = [[RZScrollView alloc] init];
     return view;
 }
+
+-(void)removeFromSuperView:(UIScrollView *)scrollView
+{
+    [scrollView removeFromSuperview];
+}
+
 
 -(void)setFrame:(CGRect)frame
 {

@@ -39,6 +39,11 @@ userInteraction=_userInteraction;
     return view;
 }
 
+-(void)removeFromSuperView:(UIImageView *)imageView
+{
+    [imageView removeFromSuperview];
+}
+
 -(void)setFrame:(CGRect)frame
 {
     [super setFrame:frame];

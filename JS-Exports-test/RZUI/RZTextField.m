@@ -1,84 +1,68 @@
 //
-//  View.m
+//  RZTextField.m
 //  JS-Exports-test
 //
-//  Created by Sandeep S Kumar on 30/03/14.
+//  Created by Shrisha S. Bhat on 17/04/14.
 //  Copyright (c) 2014 Razorthink. All rights reserved.
 //
 
-#import "RZView.h"
+#import "RZTextField.h"
 #import "Utils.h"
-#import "AppContext.h"
 
-@interface RZView ()
+@interface RZTextField ()
 
 @property NSString *nodeClass;
 
 @end
 
-@implementation RZView
+@implementation RZTextField
 
 @synthesize
 nodeClass=_nodeClass,
 background=_background,
-frame=_frame,
-cornerRadius=_cornerRadius;
+frame=_frame;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
+        // Initialization code
     }
     return self;
 }
 
-+ (RZView *)create
++ (RZTextField *)create
 {
-    RZView *view = [[RZView alloc] init];
+    RZTextField *view = [[RZTextField alloc] init];
     return view;
 }
 
--(void)removeFromSuperView:(UIView *)view
+-(void)removeFromSuperView:(UITextField *)textField
 {
-    [view removeFromSuperview];
-}
-
--(void)setBackground:(UIColor *)background
-{
-    [super setBackgroundColor:background];
-}
-
--(void)setFrame:(CGRect)frame
-{
-    [super setFrame:frame];
-}
-
--(void)setCornerRadius:(CGFloat)cornerRadius
-{
-    self.layer.cornerRadius = cornerRadius;
-}
-
--(CGFloat)cornerRadius
-{
-    return self.layer.cornerRadius;
+    [textField removeFromSuperview];
 }
 
 -(void)set:(JSValue *)config
-{    
-    if (![config[@"alpha"] isUndefined]) {
-        self.alpha = [config[@"alpha"] toDouble];
+{
+    if (![config[@"text"] isUndefined]) {
+        self.text = [config[@"text"] toString];
     }
     
-    if (![config[@"background"] isUndefined]) {
-        self.backgroundColor = [Utils makeColor:[config[@"background"] toArray]];
+    if (![config[@"textColor"] isUndefined]) {
+        self.textColor = [Utils makeColor:[config[@"textColor"] toArray]];
     }
     
     if (![config[@"frame"] isUndefined]) {
         self.frame = [Utils makeFrame:[config[@"frame"] toArray]];
+        self.keyboardType = UIKeyboardTypeDefault;
+        self.borderStyle = UITextBorderStyleRoundedRect;
+        self.placeholder = @"name";
+        self.backgroundColor = [UIColor whiteColor];
+        self.delegate = self;
     }
     
-    if (![config[@"cornerRadius"] isUndefined]) {
-        self.layer.cornerRadius = [config[@"cornerRadius"] toDouble];
+    if (![config[@"background"] isUndefined]) {
+        self.background = [Utils makeColor:[config[@"background"] toArray]];
     }
     
     if (![config[@"class"] isUndefined]) {
@@ -115,14 +99,5 @@ cornerRadius=_cornerRadius;
 - (void)append:(UIView *)child {
     [self addSubview:child];
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

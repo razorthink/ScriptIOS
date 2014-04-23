@@ -42,6 +42,11 @@
     return button;
 }
 
+-(void)removeFromSuperView:(UIButton *)button
+{
+    [button removeFromSuperview];
+}
+
 -(void)setBackground:(UIColor *)background
 {
     [super setBackgroundColor:background];

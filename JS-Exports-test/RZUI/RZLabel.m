@@ -38,6 +38,11 @@ cornerRadius=_cornerRadius;
     return button;
 }
 
+-(void)removeFromSuperView:(UILabel *)label
+{
+    [label removeFromSuperview];
+}
+
 -(void)setBackground:(UIColor *)background
 {
     [super setBackgroundColor:background];
@@ -70,6 +75,7 @@ cornerRadius=_cornerRadius;
     
     if (![config[@"frame"] isUndefined]) {
         self.frame = [Utils makeFrame:[config[@"frame"] toArray]];
+        NSLog(@"%@", [config[@"frame"] toArray]);
     }
     
     if (![config[@"font"] isUndefined]) {

@@ -7,16 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <JavaScriptCore/JavaScriptCore.h>
 #import "RZScrollView.h"
 
-@interface RZTableView : UITableView
-{
-    RZScrollView *scrolView;
-}
+@protocol TableViewJSExports <JSExport>
 
--(void)initWithRZScrollView: (RZScrollView *)scrollview;
+@property CGRect frame;
 
--(void)set:(JSValue *)config;
-+(id)create;
+- (void)set:(JSValue *)config;
+- (void)append:(UIView *)child;
+- (JSValue *)get:(NSString *)attr;
+-(void)removeFromSuperView:(UITableView *)tableView;
+
+- (void)displayTable;
+
++ (id)create;
+
+@end
+
+
+@interface RZTableView : UITableView <TableViewJSExports>
 
 @end

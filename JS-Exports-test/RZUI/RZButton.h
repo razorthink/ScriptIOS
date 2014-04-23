@@ -19,6 +19,7 @@
 - (void)set:(JSValue *)config;
 - (void)append:(UIView *)child;
 - (JSValue *)get:(NSString *)attr;
+-(void)removeFromSuperView:(UIButton *)button;
 
 // event handler setters
 JSExportAs(on, - (void)setEvent:(NSString *)event withHandler:(JSValue *)handler);
