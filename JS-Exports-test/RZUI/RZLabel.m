@@ -87,7 +87,8 @@ cornerRadius=_cornerRadius;
     }
     
     if (![config[@"textColor"] isUndefined]) {
-        [self setTextColor:[config[@"textColor"] toObjectOfClass:[UIColor class]]];
+        [self setTextColor:[Utils makeColor:[config[@"textColor"] toArray]]];
+
     }
     
     if (![config[@"textAlign"] isUndefined]) {
