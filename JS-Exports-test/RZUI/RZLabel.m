@@ -88,7 +88,17 @@ cornerRadius=_cornerRadius;
     
     if (![config[@"textColor"] isUndefined]) {
         [self setTextColor:[Utils makeColor:[config[@"textColor"] toArray]]];
-
+    }
+    
+    if (![config[@"lineBreakMode"] isUndefined]) {
+        NSString *lineBreakMode = [config[@"lineBreakMode"] toString];
+        
+        if ([lineBreakMode isEqual:@"NSLineBreakByWordWrapping"]) [self setLineBreakMode:NSLineBreakByWordWrapping];
+        if ([lineBreakMode isEqual:@"NSLineBreakByCharWrapping"]) [self setLineBreakMode:NSLineBreakByCharWrapping];
+        if ([lineBreakMode isEqual:@"NSLineBreakByClipping"]) [self setLineBreakMode:NSLineBreakByClipping];
+        if ([lineBreakMode isEqual:@"NSLineBreakByTruncatingHead"]) [self setLineBreakMode:NSLineBreakByTruncatingHead];
+        if ([lineBreakMode isEqual:@"NSLineBreakByTruncatingTail"]) [self setLineBreakMode:NSLineBreakByTruncatingTail];
+        if ([lineBreakMode isEqual:@"NSLineBreakByTruncatingMiddle"]) [self setLineBreakMode:NSLineBreakByTruncatingMiddle];
     }
     
     if (![config[@"textAlign"] isUndefined]) {
