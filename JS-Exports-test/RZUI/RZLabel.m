@@ -85,6 +85,9 @@ cornerRadius=_cornerRadius;
     if (![config[@"text"] isUndefined]) {
         [self setText:[config[@"text"] toString]];
     }
+    if (![config[@"preferredMaxLayoutWidth"] isUndefined]) {
+        self.preferredMaxLayoutWidth = [config[@"preferredMaxLayoutWidth"] toDouble];
+    }
     
     if (![config[@"textColor"] isUndefined]) {
         [self setTextColor:[Utils makeColor:[config[@"textColor"] toArray]]];
